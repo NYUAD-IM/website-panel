@@ -7,7 +7,7 @@ categories: data convention
 
 # NYUAD IM Documentation
 
-Welcome blah blah.
+Hey there. This is an up-to-date documentation of how the NYUAD IM website works. The repo for the website is [here](https://github.com/NYUAD-IM/website) and our DIY content management systsem (modestly named *panel*) is [here](https://github.com/NYUAD-IN/website-panel)
 
 #### Table of Contents
 - [Data Structures](#data-structures)
@@ -21,31 +21,84 @@ Welcome blah blah.
 
 #### Academics
 
+```
+{
+	'title': 'Communications Lab',
+	'department':'Interactive Media',
+	'track': 'Foundation',
+	'instructors': ['Craig Protzel', 'Pierre Depaz'],
+	'terms':['Fall 2018', 'Spring 2018'],
+	'website':'http://commlab.nyuad.im',
+	'description':{
+		'short': 'intro to multimedia storytelling',
+		'long': 'very long intro'
+		},
+	'cross-listings':['Computer Science', 'Psychology'],
+	'tag':'commlab'
+}
+```
+
 ---
 
 #### Workshops
+```
+{
+	'title': 'Intro to Arduino',
+	'instructor': 'Michael Shiloh',
+	'date':'Feb. 12th - 6:00pm',
+	'location':'IM Lab - C3-029',
+	'description': 'Arduino is fun and Michael knows a lot about it.'
+}
+```
 
 ---
 
 #### Opportunities
 
+```
+{
+
+}
+```
+
 ---
 
 #### People
+
+```
+{
+
+}
+```
 
 ---
 
 ## Panel Scripts
 
-Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-
-Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+Tavius will document all this.
 
 ---
 
 ## Website Scripts
 
+#### landing.js
+
+#### sketch-manager.js
+
+#### panel-connection.js
+
+#### academics.js
+
+#### activities.js
+
+#### people.js
+
+#### opportunities.js
+
 ---
 
 ## Website Style
+
+#### Fonts
+
+#### Colors
