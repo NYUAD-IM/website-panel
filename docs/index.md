@@ -70,6 +70,27 @@ Hey there. This is an up-to-date documentation of how the NYUAD IM website works
 
 }
 ```
+#### Projects
+
+```
+{
+    "project_title": "Lumarca Building Workshop",
+    "project_authors":["Miha Klasinc","Arantza Rodriguez","Davis Teague","Mari Calderon"],
+    "description":{
+      "short":"Community-based construction of a 3-dimensional projection display",
+      "long":"Lumarca is a volumetric display by Matt Parker and Albert Huang that uses projection onto a field of strings to create an illusion of depth, which effectively turns a 2-dimensional projection into a 3-dimensional display. In fall 2017, Interactive Media students constructed their own Lumarca display as part of a weekend-long workshop."
+    },
+    "website":"https://www.myportfolio.com/lumarca/",
+    "img":["img_01.jpg","img_02.png","img_03.jpg"],
+    "video":"https://vimeo.com/user12345",
+    "tags":{
+       "course":"Intro to IM",
+       "semester":"Spring 2018",
+       "tech":"Physical",
+       "custom":["projection mapping","workshop"]
+    }
+}
+```
 
 ---
 
