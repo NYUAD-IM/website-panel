@@ -98,7 +98,7 @@ This structure will be used to populate the student gallery page. `description.s
       "long":"long description(1 paragraph, max 2)"
     },
     "website":"https://www.myportfolio.com/lumarca/",
-    "images":["img_01.jpg","img_02.png","img_03.jpg"],
+    "images":["thumbnail_photo.jpg","second_phot.png","third_photo.jpg"],
     "video":"https://vimeo.com/user12345",
     "tags":{
        "course":"Intro to IM",
