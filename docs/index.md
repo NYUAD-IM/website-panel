@@ -24,17 +24,17 @@ This represents all of the classes displayed on `/academics`, whether IM require
 ```json
 {
 	"title": "Communications Lab",
-	"department":"Interactive Media",
+	"program":"Interactive Media",
 	"track": "Foundation",
 	"instructors": ["Craig Protzel", "Pierre Depaz"],
 	"terms":["Fall 2018", "Spring 2018"],
-	"website":"http://commlab.nyuad.im",
+	"link":"http://commlab.nyuad.im",
 	"description":{
 		"short": "intro to multimedia storytelling",
 		"long": "very long intro"
 		},
 	"cross-listings": ["Computer Science", "Psychology"],
-	"tag": "commlab"
+	"tags": ["commlab"]
 }
 ```
 
