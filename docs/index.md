@@ -90,8 +90,8 @@ This structure will populate our `/people` page, from Program Heads to Lab Monit
 This is Miha's thing. I'll let him describe what some ambiguous fields might be.
 ```json
 {
-    "project_title": "Lumarca Building Workshop",
-    "project_authors":["Miha Klasinc","Arantza Rodriguez","Davis Teague","Mari Calderon"],
+    "title": "Lumarca Building Workshop",
+    "authors":["Miha Klasinc","Arantza Rodriguez","Davis Teague","Mari Calderon"],
     "description":{
       "short":"Community-based construction of a 3-dimensional projection display",
       "long":"Lumarca is a volumetric display by Matt Parker and Albert Huang that uses projection onto a field of strings to create an illusion of depth, which effectively turns a 2-dimensional projection into a 3-dimensional display. In fall 2017, Interactive Media students constructed their own Lumarca display as part of a weekend-long workshop."
