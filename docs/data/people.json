@@ -1,0 +1,23 @@
+[
+  {
+  	"name": "Craig Protzel",
+  	"position": "Program Head of Interactive Media",
+  	"current": "true",
+  	"responsibilities": "runs the ship",
+  	"courses": ["Communication and Technology", "Communication Lab", "Mashups: Creating with Web API", "Making Education", "Explorable Stories"],
+  	"website": "http://craigprotzel.com/",
+  	"email": "craig.protzel@nyu.edu",
+  	"blurb": "Craig comes from LA and has been doing editing and production work in the entertainment and teaching creative coding for a while!"
+  },
+
+  {
+  	"name": "Pierre Depaz",
+  	"position": "Lecturer of Interactive Media",
+  	"current": "true",
+  	"responsibilities": "assigns a lot of work in 2-cred classes",
+  	"courses": ["Communication Lab", "Politics of Code", "Alternate Realities", "Software Art: Image", "Software Art: Text"],
+  	"website": "https://pierredepaz.net/",
+  	"email": "pierre.depaz@gmail.com",
+  	"blurb": ":)"
+  }
+]
