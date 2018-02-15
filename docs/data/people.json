@@ -14,10 +14,10 @@
   	"name": "Pierre Depaz",
   	"position": "Lecturer of Interactive Media",
   	"current": "true",
-  	"responsibilities": "assigns a lot of work in 2-cred classes",
+  	"responsibilities": "assigns a very reasonable amount of work in 2-cred classes",
   	"courses": ["Communication Lab", "Politics of Code", "Alternate Realities", "Software Art: Image", "Software Art: Text"],
   	"website": "https://pierredepaz.net/",
   	"email": "pierre.depaz@gmail.com",
-  	"blurb": ":)"
+  	"blurb": "(:"
   }
 ]
