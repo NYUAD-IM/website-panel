@@ -10,7 +10,7 @@
   		"short": "intro to interactive media",
   		"long": "With the advent of digital computation, humans have found a variety of new tools for self expression and communication. By approaching software and electronics as artists and designers, we can explore new paradigms of interaction with machines and each other. This introductory course will provide students hands-on experience with screen-based and physical interaction design through programming and electronics."
   		},
-  	"cross-listings": ["Art and Art History", "Film and New Media", "Media, Culture and Communication"],
+  	"cross-listed": ["Art and Art History", "Film and New Media", "Media, Culture and Communication"],
   	"tags": ["intro"]
   },
 
@@ -25,7 +25,7 @@
   		"short": "intro to multimedia storytelling",
   		"long": "A production based course that surveys various technologies including digital imaging, video, audio, animation, and basic web development. The forms and uses of new communications technologies are explored in a laboratory context of experimentation and discussion. Principles of interpersonal communications and media theory are considered in this new context."
   		},
-  	"cross-listings": ["Music", "Design", "Media, Culture and Communication"],
+  	"cross-listed": ["Music", "Design", "Media, Culture and Communication"],
   	"tags": ["commlab"]
   },
 
@@ -40,7 +40,7 @@
   		"short": "intro to robot building",
   		"long": "Intelligent robots living amongst ordinary people used to be a storyline relegated to the world of science-fiction. However, the 21st century has witnessed a rapid adoption of automated machinery in many aspects of daily life. In this course, students will explore the significance of today's robots through the context of art by learning about and building experimental robots for theatrical performance. Robots will be defined broadly, incorporating a wide range of machines both autonomous and remote-controlled. Students will be exposed to critical analysis regarding the historical and contemporary use of machines in art and theatrical performance. In parallel, students will also learn about electronics, programming, robotics and mechanical construction techniques. Over the course of the semester, students will iterate through multiple projects exploring how robots can convey meaning and emotion. The course will culminate with a final public performance by the robots. Experience with physical computing through Introduction to Interactive Media or a course equivalent is highly encouraged."
   		},
-  	"cross-listings": ["????"],
+  	"cross-listed": ["????"],
   	"tags": ["robots"]
   },
 
@@ -55,7 +55,7 @@
       "short": "intro to mathematical principles in nature",
       "long": "How can we capture the unpredictable evolutionary and emergent properties of nature in software? How can understanding the mathematical principles behind our physical world help us to create digital worlds? And how can implementing these code-based simulations offer insight and perspective on both environmental and human behaviors. This course attempts to address these questions by focusing on the programming strategies and techniques behind computer simulations of natural systems using p5.js (a JavaScript library in the spirit of Java’s Processing framework). We will explore a variety of forces and behaviors that occur naturally in our physical world. This includes properties of movement, physics, genetics, and neural networks. For each topic, we will write code to simulate those occurrences in a digital environment. The results will usually be visual in nature and manifested in the form of interactive animated coding sketches."
       },
-    "cross-listings": ["????"],
+    "cross-listed": ["????"],
     "tags": ["nature", "software"]
   }
 ]

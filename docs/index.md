@@ -20,14 +20,18 @@ Hey there. This is an up-to-date documentation of how the NYUAD IM website works
 ## Data Structures
 
 ### Academics
-This represents all of the classes displayed on `/academics`, whether IM requirements, electives or non-IM classes. 
-- `track` [`string`] : the tracks mentioned in the major proposal. Possible values are: `COMPUTATIONAL MEDIA`, `PHYSICAL COMPUTING`, `MEDIA & DESIGN THINKING`, `FOUNDATIONS`
-- `term` [`arrays of strings`] : the term during which it is offered. Possible values are: `FALL`, `JANUARY`, `SPRING`, `JUNE`
-- `cross-listed` [`array of strings`] : the departments with which the class is crosslisted. Possible values are the names of the departments or `[] (empty array)` for a class that is not cross-listed
+This represents all of the classes displayed on `/academics`, whether IM requirements, electives or non-IM classes.
+- `title` [`string`] :  the title of the class. if the title is `Introduction to Interactive Media`, `Communications Lab` or `Communication and Technology`, the field `Minor/Major requirement` will be appended on the webpage. If the title is `Capstone Seminar` or `Capstone Project`, the field `Major requirement` will be appended on the webpage (i.e. the title of these specific classes matter!).
+- `program` [`string`] : the program who offers that class (IM, VisArts, etc. The exact spelling shouldn't matter for now).
+- `instructors` [`array of strings`] :  names of the instructors who are offering that class. exact spelling doesn't matter.
+- `track` [`string`] : the tracks mentioned in the major proposal. Possible values are: `COMPUTATIONAL MEDIA`, `PHYSICAL COMPUTING`, `MEDIA & DESIGN THINKING`, `FOUNDATIONS`.
+- `term` [`arrays of strings`] : the term during which it is offered. Possible values are: `FALL`, `JANUARY`, `SPRING`, `JUNE`.
 - `currently_offered` [`boolean`] : whether the class is, well, currently offered.
+- `link` [`string`] :  should be a valid URL pointing to the class website. If there is no class website, leave the string empty (`""`).
 - `description.short` [`string`] : a one-line, half-page display.
 - `description.long` [`string`] : a more extensive description revealed on click.
-- `tag` [`array of strings`] : points to `/gallery` and display projects based on that tag.
+- `cross-listed` [`array of strings`] : the departments with which the class is crosslisted. Possible values are the names of the departments or `[] (empty array)` for a class that is not cross-listed.
+- `tags` [`array of strings`] : points to `/gallery` and display projects based on that tag. The exact spelling of these tags is up to Miha.
 
 #### Example
 ```json
@@ -52,14 +56,18 @@ This represents all of the classes displayed on `/academics`, whether IM require
 
 ### Workshops
 This structure only concerns the Sunday Workshops. All these fields are pretty self-explanatory (I hope).
-**Potential issue:** the time format might need to be broken down in order to filter by date? The current fix is the `upcoming` attribute but that would need to be manually updated.
+- `date.machine` [`string`]: must follow this **exact** format `YYMMDD-HHMM`.
+- `date.human` [`string`]: this should be generated at runtime from the panel. No need to fill it or display it for editing.
+
 #### Example
 ```json
 {
 	"title": "Intro to Arduino",
 	"instructor": "Michael Shiloh",
-	"date":"Feb. 12th - 6:00pm",
-	"upcoming":true,
+	"date" {
+		"machine": "180212-1800",
+		"human":"Feb. 12th - 6:00pm"
+		},
 	"location":"IM Lab - C3-029",
 	"description": "Arduino is fun and Michael knows a lot about it."
 }
@@ -69,12 +77,17 @@ This structure only concerns the Sunday Workshops. All these fields are pretty s
 
 ### Opportunities
 This structure is going to be dedicated to jobs, internships, grants and grad school applications.
-- `category` [`array of strings`] :  related to the broader category of the opportunity. Possible value are `INTERNSHIPS`, `JOBS`, `CALL FOR PROPOSALS`, `GRADUATE EDUCATION`.
+- `category.main` [`string`] :  related to the broader category of the opportunity. Possible value are `INTERNSHIPS`, `JOBS`, `CALL FOR PROPOSALS`, `GRADUATE EDUCATION`.
+- `category.sub` [`array of strings`] : realted to the topics of the opportunity. Exact values do not matter.
+
 #### Example
 ```json
 {
 	"title":"Lab monitor position",
-	"category":["software development", "performance", "vr", "physical computing"],
+	"category":{
+		"main":"JOBS",
+		"sub": ["software development", "performance", "vr", "physical computing"]
+		},
 	"location": "Bulawayo, Zimbabwe",
 	"url":"http://yoo.ooo/",
 	"deadline": "June 6th 2018",
