@@ -65,7 +65,7 @@
 	  "track": "MEDIA & DESIGN THINKING",
 	  "instructors": ["Debra Levine"],
 	  "terms":["SPRING"],
-	  "currently_offered": false
+	  "currently_offered": false,
 	  "link":"",
 	  "description":{
 		"short": "Art and performance from a social perspective",
@@ -81,7 +81,7 @@
 	  "track": "MEDIA & DESIGN THINKING",
 	  "instructors": ["Marina Zurkow"],
 	  "terms":["SPRING"],
-	  "currently_offered": true
+	  "currently_offered": true,
 	  "link":"",
 	  "description":{
 		"short": "explore method, documentation and presentation of research, as well as the merits of both success and failure.",
@@ -97,7 +97,7 @@
 	  "track": "PHYSICAL COMPUTING",
 	  "instructors": ["Michael Shiloh"],
 	  "terms":["SPRING"],
-	  "currently_offered": true
+	  "currently_offered": true,
 	  "link":"https://github.com/michaelshiloh/NetworkEverything",
 	  "description":{
 		"short": "Designing connected products.",
@@ -113,7 +113,7 @@
 	  "track": "PHYSICAL COMPUTING",
 	  "instructors": ["Michael Shiloh"],
 	  "terms":["SPRING"],
-	  "currently_offered": true
+	  "currently_offered": true,
 	  "link":"https://github.com/michaelshiloh/MachineLab/",
 	  "description":{
 		"short": "Learn about fabrication and microcontrollers.",
@@ -129,7 +129,7 @@
 	  "track": "MEDIA & DESIGN THINKING",
 	  "instructors": ["Craig Protzel"],
 	  "terms":["SPRING"],
-	  "currently_offered": true
+	  "currently_offered": true,
 	  "link":"https://github.com/craigprotzel/making-education/",
 	  "description":{
 		"short": "Learn education theory through project-based work.",
@@ -145,7 +145,7 @@
 	  "track": "COMPUTATIONAL MEDIA",
 	  "instructors": ["Aaron Sherwood"],
 	  "terms":["SPRING"],
-	  "currently_offered": true
+	  "currently_offered": true,
 	  "link":"https://github.com/artintelclass/",
 	  "description":{
 		"short": "Artificial Intelligence through the lens of art.",
@@ -162,7 +162,7 @@
 	  "track": "PHYSICAL COMPUTING",
 	  "instructors": ["Jonny Farrow"],
 	  "terms":["FALL"],
-	  "currently_offered": false
+	  "currently_offered": false,
 	  "link":"http://circuitbreakers.nyuad.im/",
 	  "description":{
 		"short": "Learn circuits from an arts perspective",
@@ -178,7 +178,7 @@
 	  "track": "MEDIA & DESIGN THINKING",
 	  "instructors": ["Carlos Guedes"],
 	  "terms":["SPRING"],
-	  "currently_offered": true
+	  "currently_offered": true,
 	  "link":"",
 	  "description":{
 		"short": "Collaborative art projects",
@@ -194,7 +194,7 @@
 	  "track": "COMPUTATIONAL MEDIA",
 	  "instructors": ["Craig Protzel"],
 	  "terms":["FALL"],
-	  "currently_offered": false
+	  "currently_offered": false,
 	  "link":"https://github.com/craigprotzel/Mashups",
 	  "description":{
 		"short": "Learn the use of APIs",
@@ -210,7 +210,7 @@
 	  "track": "COMPUTATIONAL MEDIA",
 	  "instructors": ["Pierre Depaz"],
 	  "terms":["FALL"],
-	  "currently_offered": false
+	  "currently_offered": false,
 	  "link":"",
 	  "description":{
 		"short": "the relationship between code and poliitics",
@@ -226,7 +226,7 @@
 	  "track": "COMPUTATIONAL MEDIA",
 	  "instructors": ["Pierre Depaz"],
 	  "terms":["SPRING"],
-	  "currently_offered": true
+	  "currently_offered": true,
 	  "link":"http://alt-realities.nyuad.im/",
 	  "description":{
 		"short": "Intro to Virtual Reality",
@@ -242,7 +242,7 @@
 	  "track": "COMPUTATIONAL MEDIA",
 	  "instructors": ["Pierre Depaz"],
 	  "terms":["FALL"],
-	  "currently_offered": false
+	  "currently_offered": false,
 	  "link":"",
 	  "description":{
 		"short": "Intro to computer-aided artistic endeavours in visual arts",
@@ -258,7 +258,7 @@
 	  "track": "COMPUTATIONAL MEDIA",
 	  "instructors": ["Pierre Depaz"],
 	  "terms":["FALL"],
-	  "currently_offered": false
+	  "currently_offered": false,
 	  "link":"",
 	  "description":{
 		"short": "Intro to computer-aided artistic endeavours in poetry",
@@ -274,7 +274,7 @@
 	  "track": "FOUNDATIONS",
 	  "instructors": ["Craig Protzel"],
 	  "terms":["FALL"],
-	  "currently_offered": false
+	  "currently_offered": false,
 	  "link":"http://commtech.nyuad.im/",
 	  "description":{
 		"short": "Intro to communication",
@@ -290,7 +290,7 @@
 	  "track": "MEDIA & DESIGN THINKING",
 	  "instructors": ["Scott Fitzgerald"],
 	  "terms":["SPRING"],
-	  "currently_offered": false
+	  "currently_offered": false,
 	  "link":"",
 	  "description":{
 		"short": "Intro to communication",
@@ -306,7 +306,7 @@
 	  "track": "MEDIA & DESIGN THINKING",
 	  "instructors": ["David Darts"],
 	  "terms":["SPRING"],
-	  "currently_offered": false
+	  "currently_offered": false,
 	  "link":"",
 	  "description":{
 		"short": "intensive exploration of analog and digital media",
@@ -322,7 +322,7 @@
 	  "track": "MEDIA & DESIGN THINKING",
 	  "instructors": ["Scott Fitzgerald"],
 	  "terms":["FALL"],
-	  "currently_offered": false
+	  "currently_offered": false,
 	  "link":"http://play.nyuad.im/",
 	  "description":{
 		"short": "Learning about play",
