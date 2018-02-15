@@ -20,14 +20,19 @@ Hey there. This is an up-to-date documentation of how the NYUAD IM website works
 ## Data Structures
 
 #### Academics
-This represents all of the classes displayed on `/academics`, whether IM requirements, electives or non-IM classes. The `track` attribute is related to the tracks mentioned in the major proposal (*Computational Media*, *Physical Computing*, *Media and Design Thinking*). The `description.short` attribute is a one-line display, while the `description.long` is revealed on click. The `tag` attribute points to `/gallery` and display projects based on that tag.
+This represents all of the classes displayed on `/academics`, whether IM requirements, electives or non-IM classes. 
+The `track` attribute is a `STRING` related to the tracks mentioned in the major proposal. Possible values are: **COMPUTATIONAL MEDIA**, **PHYSICAL COMPUTING**, **MEDIA & DESIGN THINKING**, **FOUNDATIONS**.
+The `term` attribute is an `ARRAY OF STRINGS` related to the term during which it is offered. Possible values are: **FALL**, **JANUARY**, **SPRING**, **JUNE**.
+The `currently_offered` attribute is a `BOOLEAN` related to whether the class is, well, currently offered.
+The `description.short` attribute is a one-line display, while the `description.long` is revealed on click. The `tag` attribute points to `/gallery` and display projects based on that tag.
 ```json
 {
 	"title": "Communications Lab",
 	"program":"Interactive Media",
-	"track": "Foundation",
+	"track": "FOUNDATIONS",
 	"instructors": ["Craig Protzel", "Pierre Depaz"],
-	"terms":["Fall 2018", "Spring 2018"],
+	"terms":["FALL", "SPRING"],
+	"currently_offered": true
 	"link":"http://commlab.nyuad.im",
 	"description":{
 		"short": "intro to multimedia storytelling",
@@ -48,7 +53,7 @@ This structure only concerns the Sunday Workshops. All these fields are pretty s
 	"title": "Intro to Arduino",
 	"instructor": "Michael Shiloh",
 	"date":"Feb. 12th - 6:00pm",
-	"upcoming":"true",
+	"upcoming":true,
 	"location":"IM Lab - C3-029",
 	"description": "Arduino is fun and Michael knows a lot about it."
 }
