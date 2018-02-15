@@ -9,7 +9,7 @@ categories: data convention
 
 Hey there. This is an up-to-date documentation of how the NYUAD IM website works. The repo for the website is [here](https://github.com/NYUAD-IM/website) and our DIY content management systsem (modestly named *panel*) is [here](https://github.com/NYUAD-IN/website-panel)
 
-#### Table of Contents
+### Table of Contents
 - [Data Structures](#data-structures)
 - [Panel Scripts](#panel-scripts)
 - [Website Scripts](#website-scripts)
@@ -19,12 +19,17 @@ Hey there. This is an up-to-date documentation of how the NYUAD IM website works
 
 ## Data Structures
 
-#### Academics
+### Academics
 This represents all of the classes displayed on `/academics`, whether IM requirements, electives or non-IM classes. 
-The `track` attribute is a `STRING` related to the tracks mentioned in the major proposal. Possible values are: **COMPUTATIONAL MEDIA**, **PHYSICAL COMPUTING**, **MEDIA & DESIGN THINKING**, **FOUNDATIONS**.
-The `term` attribute is an `ARRAY OF STRINGS` related to the term during which it is offered. Possible values are: **FALL**, **JANUARY**, **SPRING**, **JUNE**.
-The `currently_offered` attribute is a `BOOLEAN` related to whether the class is, well, currently offered.
-The `description.short` attribute is a one-line display, while the `description.long` is revealed on click. The `tag` attribute points to `/gallery` and display projects based on that tag.
+- `track` [`string`] : the tracks mentioned in the major proposal. Possible values are: `COMPUTATIONAL MEDIA`, `PHYSICAL COMPUTING`, `MEDIA & DESIGN THINKING`, `FOUNDATIONS`
+- `term` [`arrays of strings`] : the term during which it is offered. Possible values are: `FALL`, `JANUARY`, `SPRING`, `JUNE`
+- `cross-listed` [`array of strings`] : the departments with which the class is crosslisted. Possible values are the names of the departments or `[] (empty array)` for a class that is not cross-listed
+- `currently_offered` [`boolean`] : whether the class is, well, currently offered.
+- `description.short` [`string`] : a one-line, half-page display.
+- `description.long` [`string`] : a more extensive description revealed on click.
+- `tag` [`array of strings`] : points to `/gallery` and display projects based on that tag.
+
+#### Example
 ```json
 {
 	"title": "Communications Lab",
@@ -38,16 +43,17 @@ The `description.short` attribute is a one-line display, while the `description.
 		"short": "intro to multimedia storytelling",
 		"long": "very long intro"
 		},
-	"cross-listings": ["Computer Science", "Psychology"],
+	"cross-listed": ["Computer Science", "Psychology"],
 	"tags": ["commlab"]
 }
 ```
 
 ---
 
-#### Workshops
+### Workshops
 This structure only concerns the Sunday Workshops. All these fields are pretty self-explanatory (I hope).
 **Potential issue:** the time format might need to be broken down in order to filter by date? The current fix is the `upcoming` attribute but that would need to be manually updated.
+#### Example
 ```json
 {
 	"title": "Intro to Arduino",
@@ -61,8 +67,10 @@ This structure only concerns the Sunday Workshops. All these fields are pretty s
 
 ---
 
-#### Opportunities
-This structure is going to be dedicated to jobs, internships, grants and grad school applications. Again, these fields should be self-explanatory.
+### Opportunities
+This structure is going to be dedicated to jobs, internships, grants and grad school applications.
+- `category` [`array of strings`] :  related to the broader category of the opportunity. Possible value are `INTERNSHIPS`, `JOBS`, `CALL FOR PROPOSALS`, `GRADUATE EDUCATION`.
+#### Example
 ```json
 {
 	"title":"Lab monitor position",
@@ -76,7 +84,7 @@ This structure is going to be dedicated to jobs, internships, grants and grad sc
 
 ---
 
-#### People
+### People
 This structure will populate our `/people` page, from Program Heads to Lab Monitors. The `current` attribute would be used in two ways: separating between current and past community members and only displaying current Lab Monitors (due to the sheer number of Monitors over time). Ideally, the `courses` list would point to the `/academics` page.
 ```json
 {
