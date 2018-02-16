@@ -25,7 +25,7 @@ This represents all of the classes displayed on `/academics`, whether IM require
 - `number` [`string`] : the course numer according to the NYUAD bulleting, including the department prefix.
 - `program` [`string`] : the program who offers that class (IM, VisArts, etc. The exact spelling shouldn't matter for now).
 - `instructors` [`array of strings`] :  names of the instructors who are offering that class. exact spelling doesn't matter.
-- `track` [`string`] : the tracks mentioned in the major proposal. Possible values are: `COMPUTATIONAL MEDIA`, `PHYSICAL COMPUTING`, `MEDIA & DESIGN THINKING`, `FOUNDATION`.
+- `track` [`string`] : the tracks mentioned in the major proposal. Possible values are: `Computational Media`, `Physical Computing`, `Media & Design Thinking`, `Foundation`.
 - `term` [`arrays of strings`] : the term during which it is offered. Possible values are: `FALL`, `JANUARY`, `SPRING`, `JUNE`.
 - `year` [`number`] : the year the class was last offered.
 - `currently_offered` [`boolean`] : whether the class is, well, currently offered.
@@ -41,7 +41,7 @@ This represents all of the classes displayed on `/academics`, whether IM require
 	"title": "Communications Lab",
 	"number": "IM-UH 1011",
 	"program":"Interactive Media",
-	"track": "FOUNDATIONS",
+	"track": "Foundation",
 	"instructors": ["Craig Protzel", "Pierre Depaz"],
 	"terms":["FALL", "SPRING"],
 	"year": 2017,
@@ -132,6 +132,7 @@ This structure will populate our `/people` page, from Program Heads to Lab Monit
 	"courses": ["Communication and Technology", "Communication Lab", "Mashups: Creating with Web API", "Making Education", "Explorable Stories"],
 	"website": "http://craigprotzel.com/",
 	"email": "craig.protzel@nyu.edu",
+	"img": "craigprotzel.png"
 }
 ```
 
