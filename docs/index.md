@@ -90,7 +90,7 @@ This structure only concerns the Sunday Workshops. All these fields are pretty s
 
 ### Opportunities
 This structure is going to be dedicated to jobs, internships, grants and grad school applications.
-- `category.main` [`string`] :  related to the broader category of the opportunity. Possible value are `INTERNSHIPS`, `JOBS`, `CALL FOR PROPOSALS`, `GRADUATE EDUCATION`.
+- `category.main` [`string`] :  related to the broader category of the opportunity. Possible value are `JOBS/INTERNSHIPS`, `CALL FOR PROPOSALS`, `GRADUATE EDUCATION`.
 - `category.sub` [`array of strings`] : realted to the topics of the opportunity. Exact values do not matter.
 - ` connections`: [`array of objects`] : connection to the opportunity - NOT PUBLIC.
 
@@ -99,13 +99,13 @@ This structure is going to be dedicated to jobs, internships, grants and grad sc
 {
 	"title":"Lab monitor position",
 	"category":{
-		"main":"JOBS",
+		"main":"JOBS/INTERNSHIPS",
 		"sub": ["software development", "performance", "vr", "physical computing"]
 		},
 	"location": "Bulawayo, Zimbabwe",
 	"url":"http://yoo.ooo/",
 	"deadline": "June 6th 2018",
-	"description":"do all these things on the other side of the world!"
+	"description":"do all these things on the other side of the world!",
 	"connections":[
 		{
 		 "name":"John Doe",
