@@ -43,13 +43,3 @@ function submitted() {
 
 */
 //   - Returns new JSON file
-
-
-
-
-let template = {
-  "title": "",
-  "blurb": "",
-  "image": "",
-  "link": ""
-}
