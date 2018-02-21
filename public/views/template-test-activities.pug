@@ -1,0 +1,10 @@
+doctype html
+html
+    head
+        script(src="../js/script.js", type="text/javascript")
+    body
+        each val in pugData
+            input(value= val.title)
+            br
+        button(onclick="Save()") Click to Save
+        

@@ -1,16 +1,18 @@
 const express = require('express')
+const pug = require('pug');
 const fs = require('fs')
 const path = require('path')
 const PORT = process.env.PORT || 5000
-var file = ''
+let file = ''
 
 express()
   .use(express.static(path.join(__dirname, 'public')))
-  .set('views', path.join(__dirname, 'views'))
-  .set('view engine', 'ejs')
+  .set('views', 'public/views')
+  .set('view engine', 'pug')
 
   .get('/', (req, res) => res.send('Welcome the NYUAD.IM Heroku home. Visit /api/[people, workshops, academics] to view the JSON'))
   .get('/api/*', jsonLoad)
+  .get('/edit/', jsonEdit)
   // Third param as error handling
   // .get('/edit/*', jsonEdit, errorFunc)
 
@@ -21,20 +23,32 @@ function jsonLoad(req, res) {
     cutPath(req.url);
         fs.readFile("docs/data/" + file + ".json", function(err, inData) {
             if(err) {
-                res.send("400, Bad Request");
+                res.send("400, Bad Request")
             }
-            var outData = JSON.parse(inData);
-            res.send(outData);
+            let outData = JSON.parse(inData)
+            res.send(outData)
         });
 }
 
 // TODO:
-// function jsonEdit() {
-//
-// }
+function jsonEdit(req, res) {
+    let pugData
+    fs.readFile("docs/data/activities.json", function(err, inData) {
+        if(err) {
+            res.send("400, Bad request")
+        }
+        pugData = JSON.parse(inData)
+        //let renderedHTML = pug.renderFile()
+        res.render('template-test-activities.pug', {"pugData": pugData})
+    })
+}
 
 function cutPath(url) {
-    var urlBits = url.split('/');
-    var wantedBit = urlBits[urlBits.length - 1];
+    let urlBits = url.split('/');
+    let wantedBit = urlBits[urlBits.length - 1];
     file = wantedBit;
 }
+
+// console.log(pug.renderFile('views/template-test.pug', {
+//     title: 'Hello'
+// }))
