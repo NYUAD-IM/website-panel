@@ -3,10 +3,12 @@ const pug = require('pug');
 const fs = require('fs')
 const path = require('path')
 const PORT = process.env.PORT || 5000
+const cors = require('cors')
 let file = ''
 
 express()
   .use(express.static(path.join(__dirname, 'public')))
+  .use(cors())
   .set('views', 'public/views')
   .set('view engine', 'pug')
 
@@ -29,6 +31,7 @@ function jsonLoad(req, res) {
 }
 
 function jsonEdit(req, res) {
+    res.header('Access-Control-Allow-Origin', 'nyuad-im.github.io')
     let pugData
     fs.readFile("docs/data/activities.json", function(err, inData) {
         if(err) {
