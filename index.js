@@ -6,6 +6,8 @@ const PORT = process.env.PORT || 5000
 const cors = require('cors')
 let file = ''
 
+console.log(process.env.EDIT_PASSWORD);
+
 express()
   .use(express.static(path.join(__dirname, 'public')))
   .use(cors())
