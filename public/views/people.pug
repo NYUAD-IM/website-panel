@@ -1,0 +1,37 @@
+doctype html
+html
+    head
+        script(scr="http://code.jquery.com/jquery-3.3.1.min.js", integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=", 
+  crossorigin="anonymous", type="text/javascript")
+        script(src="../js/people-parser.js", type="text/javascript")
+        link(rel='stylesheet' href='../css/editing.css')
+    body
+      h1 edit - people
+      div.container
+          each person in data
+              div.entry
+                  h3 person
+                  div.legend name
+                  input#name.entry-field(value= person.name)
+                  div.legend role(s)
+                  div#roles
+                    each role in person.roles
+                      input.entry-field(value= role)
+                  div.legend currently here?
+                  input#current.entry-field(type='checkbox' value= person.current)
+                  div.legend short description (< 10 words)
+                  input#desc-short.entry-field(value= person.description.short)
+                  div.legend long description (< 100 words)
+                  textarea#desc-long.entry-field(cols=100, rows=10)= person.description.long
+                  div.legend courses
+                  div#courses
+                    each course in person.courses
+                      input.entry-field(value= course)
+                  div.legend website
+                  input#website.entry-field(value= person.website)
+                  div.legend email
+                  input#email.entry-field(value= person.email)
+              br
+          div.footer
+            button(onclick="save()") Click to Save
+        

@@ -143,14 +143,14 @@ This structure will be used to populate the student gallery page. `description.s
 
 ```json
 {
-    "title": "Lumarca Building Workshop",
-    "authors":["Miha Klasinc","Arantza Rodriguez","Davis Teague","Mari Calderon"],
+    "title": "My Project Title",
+    "authors":["author1","author2","author3"],
     "description":{
-      "short":"Community-based construction of a 3-dimensional projection display",
+      "short":"My one line description",
       "long":"long description(1 paragraph, max 2)"
     },
-    "website":"https://www.myportfolio.com/lumarca/",
-    "images":["thumbnail_photo.jpg","second_phot.png","third_photo.jpg"],
+    "website":"https://www.project-website.com",
+    "images":["01.png","02.png","03.png"],
     "video":"https://vimeo.com/user12345",
     "tags":{
        "course":"Intro to IM",

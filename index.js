@@ -1,40 +1,55 @@
 const express = require('express')
+const pug = require('pug');
 const fs = require('fs')
 const path = require('path')
 const PORT = process.env.PORT || 5000
-var file = ''
+const cors = require('cors')
+
+//console.log(process.env.EDIT_PASSWORD);
 
 express()
   .use(express.static(path.join(__dirname, 'public')))
-  .set('views', path.join(__dirname, 'views'))
-  .set('view engine', 'ejs')
+  .use(cors())
+  .set('views', 'public/views')
+  .set('view engine', 'pug')
 
   .get('/', (req, res) => res.send('Welcome the NYUAD.IM Heroku home. Visit /api/[people, workshops, academics] to view the JSON'))
   .get('/api/*', jsonLoad)
-  // Third param as error handling
-  // .get('/edit/*', jsonEdit, errorFunc)
+  .get('/edit/*', jsonEdit)
 
   .listen(PORT, () => console.log(`Listening on ${ PORT }`))
 
 // Pull JSON data based on url request, serve to client:
 function jsonLoad(req, res) {
-    cutPath(req.url);
+    let file = cutPath(req.url);
         fs.readFile("docs/data/" + file + ".json", function(err, inData) {
             if(err) {
-                res.send("400, Bad Request");
+                res.send("400, Bad Request")
             }
-            var outData = JSON.parse(inData);
-            res.send(outData);
+            let outData = JSON.parse(inData)
+            res.send(outData)
         });
 }
 
-// TODO:
-// function jsonEdit() {
-//
-// }
+function jsonEdit(req, res) {
+    let file = cutPath(req.url)
+    res.header('Access-Control-Allow-Origin', 'nyuad-im.github.io')
+    let pugData
+    fs.readFile("docs/data/"+file+".json", function(err, inData) {
+        if(err) {
+            res.send("400, Bad request")
+        }
+        pugData = JSON.parse(inData)
+        res.render(file+'.pug', {"data": pugData})
+    })
+}
+
+function jsonWrite(req, res) {
+    // Recieve output JSON from pugg'd script
+}
 
 function cutPath(url) {
-    var urlBits = url.split('/');
-    var wantedBit = urlBits[urlBits.length - 1];
-    file = wantedBit;
+    let urlBits = url.split('/');
+    let wantedBit = urlBits[urlBits.length - 1];
+    return wantedBit
 }
