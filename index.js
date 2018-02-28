@@ -4,9 +4,8 @@ const fs = require('fs')
 const path = require('path')
 const PORT = process.env.PORT || 5000
 const cors = require('cors')
-let file = ''
 
-console.log(process.env.EDIT_PASSWORD);
+//console.log(process.env.EDIT_PASSWORD);
 
 express()
   .use(express.static(path.join(__dirname, 'public')))
@@ -16,13 +15,13 @@ express()
 
   .get('/', (req, res) => res.send('Welcome the NYUAD.IM Heroku home. Visit /api/[people, workshops, academics] to view the JSON'))
   .get('/api/*', jsonLoad)
-  .get('/edit/', jsonEdit)
+  .get('/edit/*', jsonEdit)
 
   .listen(PORT, () => console.log(`Listening on ${ PORT }`))
 
 // Pull JSON data based on url request, serve to client:
 function jsonLoad(req, res) {
-    cutPath(req.url);
+    let file = cutPath(req.url);
         fs.readFile("docs/data/" + file + ".json", function(err, inData) {
             if(err) {
                 res.send("400, Bad Request")
@@ -33,14 +32,15 @@ function jsonLoad(req, res) {
 }
 
 function jsonEdit(req, res) {
+    let file = cutPath(req.url)
     res.header('Access-Control-Allow-Origin', 'nyuad-im.github.io')
     let pugData
-    fs.readFile("docs/data/activities.json", function(err, inData) {
+    fs.readFile("docs/data/"+file+".json", function(err, inData) {
         if(err) {
             res.send("400, Bad request")
         }
         pugData = JSON.parse(inData)
-        res.render('template-test-activities.pug', {"pugData": pugData})
+        res.render(file+'.pug', {"data": pugData})
     })
 }
 
@@ -51,9 +51,5 @@ function jsonWrite(req, res) {
 function cutPath(url) {
     let urlBits = url.split('/');
     let wantedBit = urlBits[urlBits.length - 1];
-    file = wantedBit;
+    return wantedBit
 }
-
-// console.log(pug.renderFile('views/template-test.pug', {
-//     title: 'Hello'
-// }))
