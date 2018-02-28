@@ -1,4 +1,5 @@
 const express = require('express')
+const bp = require('body-parser')
 const pug = require('pug');
 const fs = require('fs')
 const path = require('path')
@@ -10,12 +11,15 @@ const cors = require('cors')
 express()
   .use(express.static(path.join(__dirname, 'public')))
   .use(cors())
+  .use(bp.json())
+  .use(bp.urlencoded({ extended: true }))
   .set('views', 'public/views')
   .set('view engine', 'pug')
 
   .get('/', (req, res) => res.send('Welcome the NYUAD.IM Heroku home. Visit /api/[people, workshops, academics] to view the JSON'))
   .get('/api/*', jsonLoad)
   .get('/edit/*', jsonEdit)
+  .post('/save/*', jsonSave)
 
   .listen(PORT, () => console.log(`Listening on ${ PORT }`))
 
@@ -44,8 +48,13 @@ function jsonEdit(req, res) {
     })
 }
 
-function jsonWrite(req, res) {
+function jsonSave(req, res) {
     // Recieve output JSON from pugg'd script
+    let file = cutPath(req.url)
+
+    console.log(req.body);
+
+    res.send({msg: 'done'})
 }
 
 function cutPath(url) {

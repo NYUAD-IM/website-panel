@@ -2,7 +2,7 @@
   {
     "name": "Craig Protzel",
     "roles": ["Program Head of Interactive Media", "Assistant Professor of Interactive Media"],
-    "current": true,
+    "current": "yes",
     "description": {
       "short":"runs the ship",
       "long": "Craig comes from LA and has been doing editing and production work in the entertainment and teaching creative coding for a while!"
@@ -16,7 +16,7 @@
   {
     "name": "Pierre Depaz",
     "roles": ["Lecturer of Interactive Media","Howler Radio DJ"],
-    "current": true,
+    "current": "yes",
     "description": {
       "short":"does not assign a reasonable amount of work in any class",
       "long": "une bande de brigands ravageait la campagne. Le chef des brigands dit à son fidèle second, Pedro: \"Pedro, toi qui sais si bien raconter les histoires, raconte-nous une histoire...\" Et Pedro commença en ces termes: 'Une bande de brigands ravageait la campagne...'"
@@ -30,7 +30,7 @@
   {
     "name": "Scott Fitzgerald",
     "roles": ["Program Head of Interactive Media", "Assistant Professor of Interactive Media"],
-    "current": false,
+    "current": "",
     "description": {
       "short":"came up with the idea",
       "long": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
@@ -44,7 +44,7 @@
   {
     "name": "Ume Hussain",
     "roles": ["Instructor of the Arts", "Lab Manager"],
-    "current": true,
+    "current": "yes",
     "description": {
       "short":"holds us together",
       "long": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
@@ -58,7 +58,7 @@
   {
     "name": "James Hosken",
     "roles": ["Instructor of the Arts"],
-    "current": false,
+    "current": "",
     "description": {
       "short":"abandoned ship",
       "long": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
@@ -72,7 +72,7 @@
   {
     "name": "Arantza Rodriguez",
     "roles": ["Lab Monitor"],
-    "current": true,
+    "current": "yes",
     "description": {
       "short":"is the coolest CS major",
       "long": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
@@ -86,7 +86,7 @@
   {
     "name": "Adham Chakohi",
     "roles": ["Lab Monitor"],
-    "current": true,
+    "current": "yes",
     "description": {
       "short":"pretends he is an Engineering major",
       "long": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
@@ -100,7 +100,7 @@
   {
     "name": "Miha Klasinc",
     "roles": ["Lab Monitor"],
-    "current": true,
+    "current": "yes",
     "description": {
       "short":"pretends he is a Psych major",
       "long": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
@@ -114,7 +114,7 @@
   {
     "name": "Adam Nagy",
     "roles": ["Lab Monitor"],
-    "current": true,
+    "current": "yes",
     "description": {
       "short":"pretends he is a Film major",
       "long": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
@@ -128,7 +128,7 @@
   {
     "name": "Davis Teague",
     "roles": ["Lab Monitor"],
-    "current": true,
+    "current": "yes",
     "description": {
       "short":"pretends he is a SRPP major",
       "long": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
