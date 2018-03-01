@@ -1,0 +1,27 @@
+doctype html
+html
+    head
+        script(scr="http://code.jquery.com/jquery-3.3.1.min.js", integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=", 
+  crossorigin="anonymous", type="text/javascript")
+        script(src="../js/script.js", type="text/javascript")
+        link(rel='stylesheet' href='../css/editing.css')
+    body
+        h1#category activities
+        div.container
+            each activity in data
+                div.entry
+                    h3 activity
+                    div.legend title
+                    input.title.entry-field(value= activity.title)
+                    div.legend blurb
+                    textarea.blurb.entry-field(cols=80, rows=5)= activity.blurb
+                    // TODO: What's the best UX for these page-relative paths?
+                    div.legend image path
+                    input.image.entry-field(value= activity.image)
+                    // TODO: Maybe have image preview? Guidelines for dimensions/size?
+                    div.legend link
+                    input.link.entry-field(value= activity.link)
+                    
+                br
+            div.footer
+                button(onclick="save()") Click to Save

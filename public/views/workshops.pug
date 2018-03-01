@@ -1,0 +1,39 @@
+doctype html
+html
+    head
+        script(scr="http://code.jquery.com/jquery-3.3.1.min.js", integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=", 
+  crossorigin="anonymous", type="text/javascript")
+        script(src="../js/script.js", type="text/javascript")
+        link(rel='stylesheet' href='../css/editing.css')
+    body
+        h1#category workshops
+        div.container
+            each ws in data
+                div.entry
+                    h3 workshop
+                    div.legend title
+                    input.title.entry-field(value= ws.title)
+                    div.legend instructor
+                    input.instructor.entry-field(value = ws.instructor)
+                    div.legend date (human+machine)
+                    div.date
+                        input.human.entry-field(value= ws.date.human, placeholder= 'Mar. 5th 6:00pm-8:00pm')
+                        input.machine.entry-field(value= ws.date.machine, placeholder= '180305-1800')
+                    div.legend location
+                    input.location.entry-field(value= ws.location)
+                    div.legend description
+                    textarea.desc.entry-field(cols=80, rows=7)= ws.description
+                    div.legend tags
+                    // TODO: Handle tags differently? String or CSV maybe? (Academics tags too)
+                    div.tags
+                        each tag in ws.tags
+                            input.tag.entry-field(value= tag)
+                        button(onclick="add(this.parentNode)") Add Tag
+                    div.legend link url + text
+                    div.links
+                        each set in ws.links
+                            input.url.entry-field(value= set.url, placeholder= 'url')
+                            input.text.entry-field(value= set.text, placeholder= 'text')
+                br
+            div.footer
+                button(onclick="save()") Click to Save

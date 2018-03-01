@@ -15,6 +15,7 @@ let parse = () => {
     if(i == 'item') break
     let p = {'roles':[],'description':{'short':'', 'long':''}, 'courses':[]}
       p.name = names[i].value
+      console.log(roles[i].children)
       for(let r of roles[i].children)
         p.roles.push(r.value)
       p.current = currents[i].value
@@ -27,13 +28,13 @@ let parse = () => {
       data.push(p)
   }
 
-  console.log('parsed',data);
+  //console.log('parsed',data);
   send({'data':data})
 }
 
 let send = (_data) => {
   $.ajax({
-    url:'http://localhost:5000/save/'+document.getElementById('category').innerText,
+    url:'http://localhost:5000/save/' + document.getElementById('category').innerText,
     method: 'POST',
     data: _data,
     dataType: 'json'
@@ -42,4 +43,18 @@ let send = (_data) => {
   }).fail(()=>{
     alert('failed');
   })
+}
+
+let add = (field) => {
+  console.log(field)
+  let btn = field.lastChild
+  let newIn = document.createElement('input')
+  if (btn.previousSibling == null || btn.previousSibling.value.length != 0) {
+    // Create new input field, give it a class:
+    newIn.className += "entry-field"
+    // Add the new input, keeping the button at the bottom:
+    field.removeChild(btn)
+    field.appendChild(newIn)
+    field.appendChild(btn)
+  }
 }

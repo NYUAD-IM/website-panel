@@ -1,0 +1,58 @@
+doctype html
+html
+    head
+        script(scr="http://code.jquery.com/jquery-3.3.1.min.js", integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=", 
+  crossorigin="anonymous", type="text/javascript")
+        script(src="../js/script.js", type="text/javascript")
+        link(rel='stylesheet' href='../css/editing.css')
+    body
+        h1#category academics
+        div.container
+            each course in data
+                div.entry
+                    h3 course
+                    div.legend title
+                    input.title.entry-field(value= course.title)
+                    div.legend program
+                    input.program.entry-field(value= course.program)
+                    div.legend number
+                    input.number.entry-field(value= course.number)
+                    div.legend track
+                    input.track.entry-field(value= course.track)
+                    div.legend instructor(s)
+                    div.instructors
+                        each instructor in course.instructors
+                            input.entry-field(value= instructor)
+                        button(onclick="add(this.parentNode)") Add Instructor
+                    div.legend Terms
+                    div.terms
+                        each term in course.terms
+                            input.entry-field(value= term)
+                        button(onclick="add(this.parentNode)") Add Term
+                    div.legend currently offered?
+                    if course.current
+                        input.current.entry-field(type='checkbox' value= course.current checked="checked")
+                    else
+                        input.current.entry-field(type='checkbox' value= course.current)
+                    div.legend year
+                    input.year.entry-field(value= course.year)
+                    div.legend link
+                    input.link.entry-field(value= course.link)
+                    div.legend short description (< 10 words)
+                    input.desc-short.entry-field(value= course.description.short)
+                    div.legend long description (< 250 words)
+                    textarea.desc-long.entry-field(cols=80, rows=10)= course.description.long
+                    div.legend cross-listings
+                    div.cross-listings
+                        each listing in course.cross-listed
+                            input.entry-field(value= listing)
+                        button(onclick="add(this.parentNode)") Add Cross-Listing
+                    div.legend tags
+                    // TODO: Handle tags differently? String or CSV maybe? (Workshop tags too)
+                    div.tags
+                        each tag in course.tags
+                            input.tag.entry-field(value= tag)
+                        button(onclick="add(this.parentNode)") Add Tag
+                br
+            div.footer
+                button(onclick="save()") Click to Save

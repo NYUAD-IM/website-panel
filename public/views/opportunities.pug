@@ -1,0 +1,39 @@
+doctype html
+html
+    head
+        script(scr="http://code.jquery.com/jquery-3.3.1.min.js", integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=", 
+  crossorigin="anonymous", type="text/javascript")
+        script(src="../js/script.js", type="text/javascript")
+        link(rel='stylesheet' href='../css/editing.css')
+    body
+        h1#category opportunities
+        div.container
+            each op in data
+                div.entry
+                    h3 opportunity
+                    div.legend title
+                    input.title.entry-field(value= op.title)
+                    div.legend main category
+                    input.main-cat.entry-field(value= op.category.main)
+                    div.legend sub categories
+                    div.subcats
+                        each sub in op.category.sub
+                            input.entry-field(value= sub)
+                        button(onclick="add(this.parentNode)") Add Subcategory
+                    div.legend location
+                    input.location.entry-field(value= op.location)
+                    div.legend link
+                    input.link.entry-field(value= op.link)
+                    div.legend deadline
+                    input.deadline.entry-field(value= op.deadline)
+                    div.legend description
+                    textarea.desc.entry-field(cols=80, rows=5)= op.description
+                    div.legend connection
+                    div.connections
+                        each connect in op.connections
+                            input.name.entry-field(value= connect.name, placeholder= 'name')
+                            input.contact.entry-field(value= connect.contact, placeholder= 'contact info')
+                            input.relationship.entry-field(value= connect.relationship, placeholder= 'relationship')
+                br
+            div.footer
+                button(onclick="save()") Click to Save

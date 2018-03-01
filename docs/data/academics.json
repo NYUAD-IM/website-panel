@@ -6,7 +6,7 @@
     "track": "Physical Computing",
   	"instructors": ["Michael Shiloh", "Aaron Sherwood"],
   	"terms": ["FALL", "SPRING", "JUNE"],
-    "currently_offered": true,
+    "current": true,
     "year": 2017,
     "link": "http://intro.nyuad.im/",
   	"description" :{
@@ -23,7 +23,7 @@
     "track": "Computational Media",
   	"instructors": ["Craig Protzel", "Pierre Depaz"],
   	"terms": ["FALL", "SPRING"],
-    "currently_offered": true,
+    "current": true,
     "year": 2017,
     "link": "http://commlab.nyuad.im",
   	"description": {
@@ -40,7 +40,7 @@
     "track": "Physical Computing",
   	"instructors": ["Michael Shiloh"],
   	"terms": ["FALL"],
-    "currently_offered": true,
+    "current": true,
     "year": 2017,
     "link": "????",
   	"description":{
@@ -58,7 +58,7 @@
     "track": "Computational Media",
     "instructors": ["Aaron Sherwood"],
     "terms": ["FALL"],
-    "currently_offered": true,
+    "current": true,
     "year": 2017,
     "link": "http://decodingnature.nyuad.im/syllabus/",
     "description":{
@@ -76,7 +76,7 @@
     "track": "Media & Design Thinking",
 	  "instructors": ["Debra Levine"],
 	  "terms":["SPRING"],
-	  "currently_offered": false,
+	  "current": false,
     "year": 2017,
     "link":"",
 	  "description":{
@@ -94,7 +94,7 @@
     "track": "Media & Design Thinking",
 	  "instructors": ["Marina Zurkow"],
 	  "terms":["SPRING"],
-	  "currently_offered": true,
+	  "current": true,
     "year": 2017,
     "link":"",
 	  "description":{
@@ -112,7 +112,7 @@
     "track": "Physical Computing",
 	  "instructors": ["Michael Shiloh"],
 	  "terms":["SPRING"],
-	  "currently_offered": true,
+	  "current": true,
     "year": 2017,
     "link":"https://github.com/michaelshiloh/NetworkEverything",
 	  "description":{
@@ -130,7 +130,7 @@
     "track": "Physical Computing",
 	  "instructors": ["Michael Shiloh"],
 	  "terms":["SPRING"],
-	  "currently_offered": true,
+	  "current": true,
     "year": 2017,
     "link":"https://github.com/michaelshiloh/MachineLab/",
 	  "description":{
@@ -148,7 +148,7 @@
     "track": "Media & Design Thinking",
 	  "instructors": ["Craig Protzel"],
 	  "terms":["SPRING"],
-	  "currently_offered": true,
+	  "current": true,
     "year": 2017,
     "link":"https://github.com/craigprotzel/making-education/",
 	  "description":{
@@ -166,7 +166,7 @@
     "track": "Computational Media",
 	  "instructors": ["Aaron Sherwood"],
 	  "terms":["SPRING"],
-	  "currently_offered": true,
+	  "current": true,
     "year": 2017,
     "link":"https://github.com/artintelclass/",
 	  "description":{
@@ -185,7 +185,7 @@
     "track": "Physical Computing",
 	  "instructors": ["Jonny Farrow"],
 	  "terms":["FALL"],
-	  "currently_offered": false,
+	  "current": false,
     "year": 2017,
     "link":"http://circuitbreakers.nyuad.im/",
 	  "description":{
@@ -203,7 +203,7 @@
     "track": "Media & Design Thinking",
 	  "instructors": ["Carlos Guedes"],
 	  "terms":["SPRING"],
-	  "currently_offered": true,
+	  "current": true,
     "year": 2017,
     "link":"",
 	  "description":{
@@ -221,7 +221,7 @@
     "track": "Computational Media",
 	  "instructors": ["Craig Protzel"],
 	  "terms":["FALL"],
-	  "currently_offered": false,
+	  "current": false,
     "year": 2017,
     "link":"https://github.com/craigprotzel/Mashups",
 	  "description":{
@@ -239,7 +239,7 @@
     "track": "Computational Media",
 	  "instructors": ["Pierre Depaz"],
 	  "terms":["FALL"],
-	  "currently_offered": false,
+	  "current": false,
     "year": 2017,
     "link":"",
 	  "description":{
@@ -257,7 +257,7 @@
     "track": "Computational Media",
 	  "instructors": ["Pierre Depaz"],
 	  "terms":["SPRING"],
-	  "currently_offered": true,
+	  "current": true,
     "year": 2017,
     "link":"http://alt-realities.nyuad.im/",
 	  "description":{
@@ -275,7 +275,7 @@
     "track": "Computational Media",
 	  "instructors": ["Pierre Depaz"],
 	  "terms":["FALL"],
-	  "currently_offered": false,
+	  "current": false,
     "year": 2017,
     "link":"",
 	  "description":{
@@ -293,7 +293,7 @@
     "track": "Computational Media",
 	  "instructors": ["Pierre Depaz"],
 	  "terms":["FALL"],
-	  "currently_offered": false,
+	  "current": false,
     "year": 2017,
     "link":"",
 	  "description":{
@@ -311,7 +311,7 @@
     "track": "Computational Media",
 	  "instructors": ["Craig Protzel"],
 	  "terms":["JANUARY"],
-	  "currently_offered": false,
+	  "current": false,
     "year": 2017,
     "link":"",
 	  "description":{
@@ -328,7 +328,7 @@
     "track": "Media & Design Thinking",
 	  "instructors": ["Craig Protzel"],
 	  "terms":["FALL"],
-	  "currently_offered": false,
+	  "current": false,
     "year": 2017,
     "link":"http://commtech.nyuad.im/",
 	  "description":{
@@ -346,7 +346,7 @@
     "track": "Media & Design Thinking",
 	  "instructors": ["Scott Fitzgerald"],
 	  "terms":["SPRING"],
-	  "currently_offered": false,
+	  "current": false,
     "year": 2017,
     "link":"",
 	  "description":{
@@ -364,7 +364,7 @@
     "track": "Media & Design Thinking",
 	  "instructors": ["David Darts"],
 	  "terms":["SPRING"],
-	  "currently_offered": false,
+	  "current": false,
     "year": 2017,
     "link":"",
 	  "description":{
@@ -382,7 +382,7 @@
     "track": "Media & Design Thinking",
 	  "instructors": ["Scott Fitzgerald"],
 	  "terms":["FALL"],
-	  "currently_offered": false,
+	  "current": false,
     "year": 2017,
     "link":"http://play.nyuad.im/",
 	  "description":{
