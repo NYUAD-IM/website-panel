@@ -1,4 +1,5 @@
 const express = require('express')
+const bp = require('body-parser')
 const pug = require('pug');
 const fs = require('fs')
 const path = require('path')
@@ -9,12 +10,15 @@ let file = ''
 express()
     .use(express.static(path.join(__dirname, 'public')))
     .use(cors())
+    .use(bp.json())
+    .use(bp.urlencoded({extended: true}))
     .set('views', 'public/views')
     .set('view engine', 'pug')
 
     .get('/', (req, res) => res.send('Welcome the NYUAD.IM Heroku landing. Visit /api/* or /edit/* for the JSON data pages.'))
     .get('/api/*', jsonLoad)
     .get('/edit/*', jsonEdit)
+    .post('/save/*', jsonSave)
 
     .listen(PORT, () => console.log(`Listening on ${ PORT }`))
 
@@ -48,8 +52,9 @@ function jsonEdit(req, res) {
     })
 }
 
-function jsonWrite(req, res) {
+function jsonSave(req, res) {
     // Recieve output JSON from pugg'd script?
+	console.log(req.body);
 }
 
 function cutPath(url) {
