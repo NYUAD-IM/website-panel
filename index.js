@@ -26,11 +26,11 @@ express()
 // Pull JSON data based on url request, serve to client:
 function jsonLoad(req, res) {
     let outData
-    cutPath(req.url);
+    cutPath(req.url)
     fs.readFile("docs/data/" + file + ".json", (err, inData) => {
         // TODO: Edit to avoid hard server crashes:
         if (err) {
-            res.status(404).send('Bad Request');
+            res.status(404).send('Bad Request')
         }
         outData = JSON.parse(inData)
         res.send(outData)
@@ -40,11 +40,11 @@ function jsonLoad(req, res) {
 function jsonEdit(req, res) {
     res.header('Access-Control-Allow-Origin', 'nyuad-im.github.io')
     let pugData
-    cutPath(req.url);
+    cutPath(req.url)
     fs.readFile("docs/data/" + file + ".json", (err, inData) => {
         // TODO: Edit to avoid hard server crashes:
         if (err) {
-            res.status(400).send('Bad Request');
+            res.status(400).send('Bad Request')
         }
         pugData = JSON.parse(inData)
         // Serve the requested section based on the pug spec:
@@ -53,8 +53,14 @@ function jsonEdit(req, res) {
 }
 
 function jsonSave(req, res) {
-    // Recieve output JSON from pugg'd script?
-	console.log(req.body);
+    console.log('Recieved:')
+    console.log(req.body.data)
+    fs.writeFile("public/save/" + file + ".json", req.body, (err) => {
+        if (err) {
+            res.status(400).send('Bad Request')
+        }
+        res.status(200)
+    })
 }
 
 function cutPath(url) {

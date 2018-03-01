@@ -10,7 +10,7 @@
     "courses": ["Communication and Technology", "Communication Lab", "Mashups: Creating with Web API", "Making Education", "Explorable Stories"],
     "website": "http://craigprotzel.com/",
     "email": "craig.protzel@nyu.edu",
-    "img": "craigprotzel.jpg"
+    "image": "craigprotzel.jpg"
   },
 
   {
@@ -24,7 +24,7 @@
     "courses": ["Communication Lab", "Politics of Code", "Alternate Realities", "Software Art: Image", "Software Art: Text"],
     "website": "https://pierredepaz.net/",
     "email": "pierre.depaz@nyu.edu",
-    "img": "pierredepaz.jpg"
+    "image": "pierredepaz.jpg"
   },
 
   {
@@ -38,7 +38,7 @@
     "courses": ["Intro to Interactive Media", "Light", "Experiential Video Art"],
     "website": "https://scottfitzgerald.net/",
     "email": "scott.fitzgerald@nyu.edu",
-    "img": "scottfitzgerald.jpg"
+    "image": "scottfitzgerald.jpg"
   },
 
   {
@@ -52,7 +52,7 @@
     "courses": [],
     "website": "https://umehussain.net/",
     "email": "uh242@nyu.edu",
-    "img": "umehussain.jpg"
+    "image": "umehussain.jpg"
   },
 
   {
@@ -66,7 +66,7 @@
     "courses": [],
     "website": "https://umehussain.net/",
     "email": "uh242@nyu.edu",
-    "img": "jameshosken.jpg"
+    "image": "jameshosken.jpg"
   },
 
   {
@@ -80,7 +80,7 @@
     "courses": [],
     "website": "https://arantza-rodriguez.net/",
     "email": "air258@nyu.edu",
-    "img": "arantzarodriguez.jpg"
+    "image": "arantzarodriguez.jpg"
   },
 
   {
@@ -94,7 +94,7 @@
     "courses": [],
     "website": "https://adhamchakohi.net/",
     "email": "amc1150@nyu.edu",
-    "img": "adhamchakohi.jpg"
+    "image": "adhamchakohi.jpg"
   },
 
   {
@@ -108,7 +108,7 @@
     "courses": [],
     "website": "https://miha.net/",
     "email": "mk4908@nyu.edu",
-    "img": "mihaklasinc.jpg"
+    "image": "mihaklasinc.jpg"
   },
 
   {
@@ -122,7 +122,7 @@
     "courses": [],
     "website": "https://adamnagy.net/",
     "email": "an2208@nyu.edu",
-    "img": "adamnagy.jpg"
+    "image": "adamnagy.jpg"
   },
 
   {
@@ -136,7 +136,7 @@
     "courses": [],
     "website": "https://davis-teague.net/",
     "email": "dqt206@nyu.edu",
-    "img": "davisteague.jpg"
+    "image": "davisteague.jpg"
   },
 
   {
@@ -150,7 +150,7 @@
     "courses": [],
     "website": "https://lateefa-almazroeei.net/",
     "email": "la1475@nyu.edu",
-    "img": "lateefaalmazroeei.jpg"
+    "image": "lateefaalmazroeei.jpg"
   },
 
   {
@@ -164,6 +164,6 @@
     "courses": [],
     "website": "https://yuxinzhou.net/",
     "email": "yz2812@nyu.edu",
-    "img": "yuxinzhou.jpg"
+    "image": "yuxinzhou.jpg"
   }
 ]

@@ -1,9 +1,10 @@
 doctype html
 html
     head
-        script(scr="http://code.jquery.com/jquery-3.3.1.min.js", integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=", 
+        script(src="http://code.jquery.com/jquery-3.3.1.min.js", integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=", 
   crossorigin="anonymous", type="text/javascript")
-        script(src="../js/script.js", type="text/javascript")
+        script(src="../js/academics-parser.js", type="text/javascript")
+        script(src="../js/utilities.js", type="text/javascript")
         link(rel='stylesheet' href='../css/editing.css')
     body
         h1#category academics
@@ -55,4 +56,4 @@ html
                         button(onclick="add(this.parentNode)") Add Tag
                 br
             div.footer
-                button(onclick="save()") Click to Save
+                button(onclick="parse()") Click to Save
