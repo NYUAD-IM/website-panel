@@ -1,7 +1,7 @@
 doctype html
 html
     head
-        script(scr="http://code.jquery.com/jquery-3.3.1.min.js", integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=", 
+        script(src="http://code.jquery.com/jquery-3.3.1.min.js", integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=", 
   crossorigin="anonymous", type="text/javascript")
         script(src="../js/opportunities-parser.js", type="text/javascript")
         script(src="../js/utilities.js", type="text/javascript")
@@ -15,11 +15,11 @@ html
                     div.legend title
                     input.title.entry-field(value= op.title)
                     div.legend main category
-                    input.main-cat.entry-field(value= op.category.main)
+                    input.main.entry-field(value= op.category.main)
                     div.legend sub categories
-                    div.subcats
-                        each sub in op.category.sub
-                            input.entry-field(value= sub)
+                    div.sub
+                        each s in op.category.sub
+                            input.entry-field(value= s)
                         button(onclick="add(this.parentNode)") Add Subcategory
                     div.legend location
                     input.location.entry-field(value= op.location)
@@ -37,4 +37,4 @@ html
                             input.relationship.entry-field(value= connect.relationship, placeholder= 'relationship')
                 br
             div.footer
-                button(onclick="save()") Click to Save
+                button(onclick="parse()") Click to Save

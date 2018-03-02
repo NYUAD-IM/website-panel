@@ -54,8 +54,8 @@ function jsonEdit(req, res) {
 
 function jsonSave(req, res) {
     console.log('Recieved:')
-    console.log(req.body.data)
-    fs.writeFile("public/save/" + file + ".json", req.body, (err) => {
+    console.log(JSON.stringify(req.body.data))
+    fs.writeFile("public/save/" + file + ".json", JSON.stringify(req.body.data), (err) => {
         if (err) {
             res.status(400).send('Bad Request')
         }
