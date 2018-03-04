@@ -32,13 +32,27 @@
     "roles": ["Lecturer of Visual Arts", "Lecturer of Interactive Media"],
     "current": "yes",
     "description": {
-      "short": "Sculpture, circuit, prints, sound",
+      "short": "sculpture, circuit, prints, sound",
       "long": "Jonny Farrow is a multi-disciplinary artist working in sculpture, printmaking, and sound. His work stems from research into the liminal: from suppressed historical narratives, to popular mythologies, to the far-reaching registers of the electro-magnetic spectrum. Farrow’s work also questions the narrative of expertise; with nearly every project, he embarks on learning a new skill set in order to disrupt viewer expectations as well as his own. He holds an MA in music and an MFA in Studio Art from the School of the Art Institute of Chicago, and is currently a lecturer in Visual Arts and Interactive Media at NYUAD."
     },
     "courses": ["Circuit Breakers!", "Foundations of 3D", "Sound Art", "Print Making"],
     "website": "https:/jonnyfarrow.net/",
     "email": "jf613@nyu.edu",
     "image": "jonnyfarrow.jpg"
+  },
+
+  {
+    "name": "Marina Zurkow",
+    "roles": ["Teacher"],
+    "current": "yes",
+    "description": {
+      "short": "the way forward is developing an ecospheric mentality.",
+      "long": "Marina Zurkow is a media artist focused on near-impossible nature and culture intersections. She uses life science, materials, and technologies – including food, software, clay, animation, mycelium, and petrochemicals (when necessary) – to foster intimate connections between people and non-human agents.\nZurkow is a John Simon Guggenheim Memorial Fellow. She has also been granted awards from the New York Foundation for the Arts, New York State Council for the Arts, the Rockefeller Foundation, and Creative Capital. She is on full time faculty at NYU’s Interactive Telecommunications Program (ITP) in Tisch School of the Arts, and lives in Brooklyn, NY. She is represented by bitforms gallery."
+    },
+    "courses": ["Temporary Expert", "Making the Anthropo(s)cene"],
+    "website": "http:/o-matic.com/",
+    "email": "marinazurkow@me.com",
+    "image": "marinazurkow.jpg"
   },
 
   {
