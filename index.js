@@ -27,7 +27,7 @@ express()
 function jsonLoad(req, res) {
     let outData
     cutPath(req.url)
-    fs.readFile("docs/data/" + file + ".json", (err, inData) => {
+    fs.readFile("public/data/" + file + ".json", (err, inData) => {
         // TODO: Edit to avoid hard server crashes:
         if (err) {
             res.status(404).send('Bad Request')
@@ -41,7 +41,7 @@ function jsonEdit(req, res) {
     res.header('Access-Control-Allow-Origin', 'nyuad-im.github.io')
     let pugData
     cutPath(req.url)
-    fs.readFile("docs/data/" + file + ".json", (err, inData) => {
+    fs.readFile("public/data/" + file + ".json", (err, inData) => {
         // TODO: Edit to avoid hard server crashes:
         if (err) {
             res.status(400).send('Bad Request')

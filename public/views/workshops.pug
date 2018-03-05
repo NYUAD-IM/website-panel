@@ -25,7 +25,6 @@ html
                     div.legend description
                     textarea.desc.entry-field(cols=80, rows=7)= ws.description
                     div.legend tags
-                    // TODO: Handle tags differently? String or CSV maybe? (Academics tags too)
                     div.tags
                         each tag in ws.tags
                             input.tag.entry-field(value= tag)

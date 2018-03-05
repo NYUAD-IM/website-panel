@@ -12,13 +12,13 @@ let parse = () => {
     for(let i in announcements){
         if(i == 'item') break
         if(i == 'length') break
-        let a = {}
+        let a = {'links':{'url':'','text':''}}
         a.title = titles[i].value
         a.date = dates[i].value
         a.location = locations[i].value
         a.description = descriptions[i].value
-        a.url = urls[i].value            // TODO: Are these done right?
-        a.text = texts[i].value
+        a.links.url = urls[i].value
+        a.links.text = texts[i].value
 
         data.push(a)
     }

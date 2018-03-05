@@ -16,8 +16,8 @@ let parse = () => {
     for(let i in opportunities){
         if(i == 'item') break
         if(i == 'length') break
-        let o = {'category':{'main':'','sub':[]}}
-        o.title = opportunities[i].value
+        let o = {'category':{'main':'','sub':[]},'connections':{'name':'','contact':'','relationship':''}}
+        o.title = titles[i].value
         o.category.main = mains[i].value
         for(let s of subs[i].children)
             if(s != subs[i].lastChild)
@@ -26,9 +26,9 @@ let parse = () => {
         o.link = links[i].value
         o.deadline = deadlines[i].value
         o.description = descriptions[i].value
-        o.name = names[i].value
-        o.contact = contacts[i].value
-        o.relationship = relationships[i].value
+        o.connections.name = names[i].value
+        o.connections.contact = contacts[i].value
+        o.connections.relationship = relationships[i].value
 
         data.push(o);
     }

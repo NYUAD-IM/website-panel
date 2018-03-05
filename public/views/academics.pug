@@ -49,7 +49,6 @@ html
                             input.entry-field(value= listing)
                         button(onclick="add(this.parentNode)") Add Cross-Listing
                     div.legend tags
-                    // TODO: Handle tags differently? String or CSV maybe? (Workshop tags too)
                     div.tags
                         each tag in course.tags
                             input.tag.entry-field(value= tag)
