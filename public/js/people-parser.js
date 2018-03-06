@@ -25,7 +25,7 @@ let parse = () => {
         p.website = websites[i].value
         p.email = emails[i].value
         p.image = images[i].value
-        
+
         data.push(p)
     }
     send({'data':data})

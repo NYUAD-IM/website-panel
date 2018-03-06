@@ -26,12 +26,12 @@ let listParse = (obj, populate, list) => {
             }
             // If the input IS blank, skip it:
             if(x.value === "") {
-                console.log("Empty, skipped: ")
-                console.log(x.value)
+                //console.log("Empty, skipped: ")
+                //console.log(x.value)
             }
             // If the input is blank AND this array is empty, add a blank slot:
             if(x.value === "" && populate.length == 0) {
-                console.log("Empty array! ISSUE")
+                //console.log("Empty array! ISSUE")
                 populate.push("")
             }
         }
@@ -40,7 +40,8 @@ let listParse = (obj, populate, list) => {
 
 let send = (_data) => {
   $.ajax({
-    url:'http://localhost:5000/data/' + document.getElementById('category').innerText,
+    // 'http://localhost:5000/data/' +
+    url: document.getElementById('category').innerText,
     method: 'POST',
     data: _data,
     dataType: 'json'
