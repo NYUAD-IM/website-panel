@@ -22,9 +22,7 @@ let parse = () => {
         w.date.machine = machineDates[i].value
         w.location = locations[i].value
         w.description = descriptions[i].value
-        for(let t of tags[i].children)
-            if(t != tags[i].lastChild)
-                w.tags.push(t.value)
+        listParse(w, w.tags, tags[i])
         w.links.url = urls[i].value
         w.links.text = texts[i].value
 

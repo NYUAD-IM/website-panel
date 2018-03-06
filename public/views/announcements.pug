@@ -1,7 +1,7 @@
 doctype html
 html
     head
-        script(src="http://code.jquery.com/jquery-3.3.1.min.js", integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=", 
+        script(src="https://code.jquery.com/jquery-3.3.1.min.js", integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=", 
   crossorigin="anonymous", type="text/javascript")
         script(src="../js/announcements-parser.js", type="text/javascript")
         script(src="../js/utilities.js", type="text/javascript")
@@ -22,9 +22,8 @@ html
                     textarea.desc.entry-field(cols=80, rows=5)= announcement.description
                     div.legend link url + text
                     div.links
-                        each set in announcement.links
-                            input.url.entry-field(value= set.url, placeholder= 'url')
-                            input.text.entry-field(value= set.text, placeholder= 'text')
+                        input.url.entry-field(value= announcement.links.url, placeholder= 'url')
+                        input.text.entry-field(value= announcement.links.text, placeholder= 'text')
                 br
             div.footer
                 button(onclick="parse()") Click to Save

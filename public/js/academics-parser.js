@@ -13,34 +13,26 @@ let parse = () => {
     let links = document.getElementsByClassName('link')
     let desc_short = document.getElementsByClassName('desc-short')
     let desc_long = document.getElementsByClassName('desc-long')
-    let cross_listings = document.getElementsByClassName('cross-listings')
+    let crosslistings = document.getElementsByClassName('crosslisted')
     let tags = document.getElementsByClassName('tags')
 
     for(let i in academics){
         if(i == 'item') break
         if(i == 'length') break
-        let a = {'instructors':[],'terms':[],'description':{'short':'','long':''},'cross-listed':[],'tags':[]}
+        let a = {'instructors':[],'terms':[],'description':{'short':'','long':''},'crosslisted':[],'tags':[]}
         a.title = titles[i].value
         a.program = programs[i].value
         a.number = numbers[i].value
         a.track = tracks[i].value
-        for(let ins of instructors[i].children)
-            if(ins != instructors[i].lastChild)
-                a.instructors.push(ins.value)
-        for(let t of terms[i].children)
-            if(t != terms[i].lastChild)
-                a.terms.push(t.value)
+        listParse(a, a.instructors, instructors[i])
+        listParse(a, a.terms, terms[i])
         a.current = currents[i].value
         a.year = years[i].value
         a.link = links[i].value
         a.description.short = desc_short[i].value
         a.description.long = desc_long[i].value
-        for(let c of cross_listings[i].children)
-            if(c !=cross_listings[i].lastChild)
-                a.cross_listings.push(c.value)
-        for(let t of tags[i].children)
-            if(t != tags[i].lastChild)
-                a.tags.push(t.value)
+        listParse(a, a.crosslisted, crosslistings[i])
+        listParse(a, a.tags, tags[i])
         data.push(a)
     }
     send({'data':data})

@@ -13,23 +13,19 @@ let parse = () => {
     let images = document.getElementsByClassName('image')
 
     for (let i in persons) {
-        //console.log(i)  // Why does this hit length?
         if (i == 'item') break
         if (i == 'length') break
         let p = {'roles':[],'description':{'short':'','long':''},'courses':[]}
         p.name = names[i].value
-        for (let r of roles[i].children)
-            if (r != roles[i].lastChild) // Button is last child
-                p.roles.push(r.value)
+        listParse(p, p.roles, roles[i])
         p.current = currents[i].value
         p.description.short = desc_short[i].value
         p.description.long = desc_long[i].value
-        for (let c of courses[i].children)
-            if (c != courses[i].lastChild)
-                p.courses.push(c.value)
+        listParse(p, p.courses, courses[i])
         p.website = websites[i].value
         p.email = emails[i].value
         p.image = images[i].value
+        
         data.push(p)
     }
     send({'data':data})

@@ -1,7 +1,7 @@
 doctype html
 html
     head
-        script(src="http://code.jquery.com/jquery-3.3.1.min.js", integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=", 
+        script(src="https://code.jquery.com/jquery-3.3.1.min.js", integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=", 
   crossorigin="anonymous", type="text/javascript")
         script(src="../js/opportunities-parser.js", type="text/javascript")
         script(src="../js/utilities.js", type="text/javascript")
@@ -19,7 +19,7 @@ html
                     div.legend sub categories
                     div.sub
                         each s in op.category.sub
-                            input.entry-field(value= s)
+                            input.entry-field(value= s, placeholder= "Empty categories are removed on save")
                         button(onclick="add(this.parentNode)") Add Subcategory
                     div.legend location
                     input.location.entry-field(value= op.location)
@@ -30,11 +30,10 @@ html
                     div.legend description
                     textarea.desc.entry-field(cols=80, rows=5)= op.description
                     div.legend connection
-                    div.connections
-                        each connect in op.connections
-                            input.name.entry-field(value= connect.name, placeholder= 'name')
-                            input.contact.entry-field(value= connect.contact, placeholder= 'contact info')
-                            input.relationship.entry-field(value= connect.relationship, placeholder= 'relationship')
+                    div.connection
+                        input.name.entry-field(value= op.connection.name, placeholder= 'name')
+                        input.contact.entry-field(value= op.connection.contact, placeholder= 'contact info')
+                        input.relationship.entry-field(value= op.connection.relationship, placeholder= 'relationship')
                 br
             div.footer
                 button(onclick="parse()") Click to Save

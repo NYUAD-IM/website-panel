@@ -1,7 +1,7 @@
 doctype html
 html
     head
-        script(src="http://code.jquery.com/jquery-3.3.1.min.js", integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=", 
+        script(src="https://code.jquery.com/jquery-3.3.1.min.js", integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=", 
   crossorigin="anonymous", type="text/javascript")
         script(src="../js/academics-parser.js", type="text/javascript")
         script(src="../js/utilities.js", type="text/javascript")
@@ -23,12 +23,12 @@ html
                     div.legend instructor(s)
                     div.instructors
                         each instructor in course.instructors
-                            input.entry-field(value= instructor)
+                            input.entry-field(value= instructor, placeholder= "Empty instructors are removed on save")
                         button(onclick="add(this.parentNode)") Add Instructor
-                    div.legend Terms
+                    div.legend terms
                     div.terms
                         each term in course.terms
-                            input.entry-field(value= term)
+                            input.entry-field(value= term, placeholder= "Empty terms are removed on save")
                         button(onclick="add(this.parentNode)") Add Term
                     div.legend currently offered?
                     if course.current
@@ -44,14 +44,14 @@ html
                     div.legend long description (< 250 words)
                     textarea.desc-long.entry-field(cols=80, rows=10)= course.description.long
                     div.legend cross-listings
-                    div.cross-listings
-                        each listing in course.cross-listed
-                            input.entry-field(value= listing)
+                    div.crosslisted
+                        each listing in course.crosslisted
+                            input.entry-field(value= listing, placeholder= "Empty listings are removed on save")
                         button(onclick="add(this.parentNode)") Add Cross-Listing
                     div.legend tags
                     div.tags
                         each tag in course.tags
-                            input.tag.entry-field(value= tag)
+                            input.entry-field(value= tag, placeholder= "Empty tags are removed on save")
                         button(onclick="add(this.parentNode)") Add Tag
                 br
             div.footer

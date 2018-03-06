@@ -18,7 +18,7 @@ express()
     .get('/', (req, res) => res.send('Welcome the NYUAD.IM Heroku landing. Visit /api/* or /edit/* for the JSON data pages.'))
     .get('/api/*', jsonLoad)
     .get('/edit/*', jsonEdit)
-    .post('/save/*', jsonSave)
+    .post('/data/*', jsonSave)
 
     .listen(PORT, () => console.log(`Listening on ${ PORT }`))
 
@@ -55,7 +55,7 @@ function jsonEdit(req, res) {
 function jsonSave(req, res) {
     console.log('Recieved:')
     console.log(JSON.stringify(req.body.data))
-    fs.writeFile("public/save/" + file + ".json", JSON.stringify(req.body.data), (err) => {
+    fs.writeFile("public/data/" + file + ".json", JSON.stringify(req.body.data), (err) => {
         if (err) {
             res.status(400).send('Bad Request')
         }
