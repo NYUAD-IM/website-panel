@@ -41,7 +41,7 @@ let listParse = (obj, populate, list) => {
 let send = (_data) => {
   $.ajax({
     // 'http://localhost:5000/data/' +
-    url: document.getElementById('category').innerText,
+    url: '../data/' + document.getElementById('category').innerText,
     method: 'POST',
     data: _data,
     dataType: 'json'
