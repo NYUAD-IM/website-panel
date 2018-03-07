@@ -39,6 +39,9 @@ function jsonLoad(req, res) {
 
 function jsonEdit(req, res) {
     res.header('Access-Control-Allow-Origin', 'nyuad-im.github.io')
+    res.header('Access-Control-Allow-Origin', 'nyuad.im')
+    res.header('Access-Control-Allow-Origin', 'radio.nyuad.im')
+
     let pugData
     cutPath(req.url)
     fs.readFile("public/data/" + file + ".json", (err, inData) => {
@@ -53,8 +56,7 @@ function jsonEdit(req, res) {
 }
 
 function jsonSave(req, res) {
-    console.log('Recieved:')
-    console.log(JSON.stringify(req.body.data))
+
     fs.writeFile("public/data/" + file + ".json", JSON.stringify(req.body.data), (err) => {
         if (err) {
             res.status(400).send('Bad Request')

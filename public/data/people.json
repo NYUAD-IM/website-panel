@@ -17,7 +17,7 @@
         "roles": ["Lecturer of Interactive Media", "Howler Radio DJ"],
         "current": "yes",
         "description": {
-            "short": "does not assign a reasonable amount of work in any class",
+            "short": "even javascript is political",
             "long": "Pierre is a political scientist and sofware developer from France. After graduating in Media Studies, followed by Game Design, he has worked at the crossroads of art, technology and society, ranging from theatrical performances to augmented reality for investigative journalism, including places like MoMA PS1, the Whitney Museum, the Washington Post and Stony Brook University. He is fascinated with languages, both for humans and machines."
         },
         "courses": ["Communication Lab", "Politics of Code", "Alternate Realities", "Software Art: Image", "Software Art: Text"],
@@ -31,13 +31,27 @@
         "roles": ["Lecturer of Visual Arts", "Lecturer of Interactive Media"],
         "current": "yes",
         "description": {
-            "short": "sculpture, circuit, prints, sound",
+            "short": "sculpture, circuits, prints, sound",
             "long": "Jonny Farrow is a multi-disciplinary artist working in sculpture, printmaking, and sound. His work stems from research into the liminal: from suppressed historical narratives, to popular mythologies, to the far-reaching registers of the electro-magnetic spectrum. Farrow’s work also questions the narrative of expertise; with nearly every project, he embarks on learning a new skill set in order to disrupt viewer expectations as well as his own. He holds an MA in music and an MFA in Studio Art from the School of the Art Institute of Chicago, and is currently a lecturer in Visual Arts and Interactive Media at NYUAD."
         },
         "courses": ["Circuit Breakers!", "Foundations of 3D", "Sound Art", "Print Making"],
-        "website": "https:/jonnyfarrow.net/",
+        "website": "http://www.jonnyfarrow.net",
         "email": "jf613@nyu.edu",
         "image": "jonnyfarrow.jpg"
+    },
+
+    {
+        "name": "Aaron Sherwood",
+        "roles": ["Visiting Lecturer of Interactive Media", "Co-founder of Purring Tiger"],
+        "current": "yes",
+        "description": {
+            "short": "???",
+            "long": "Aaron hasn't submitted his bio yet :(."
+          },
+          "courses": ["A.rt I.ntel", "Decoding Nature", "Sensors, body and motion", "Intro to Interactive Media"],
+          "website": "https://aaron-sherwood.com/",
+          "email": "sherwood@nyu.edu",
+          "image": "aaronsherwood.png"
     },
 
     {
@@ -91,8 +105,8 @@
             "long": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
         },
         "courses": [""],
-        "website": "https://umehussain.net/",
-        "email": "uh242@nyu.edu",
+        "website": "http://jameshosken.com/",
+        "email": "james.hosken@nyu.edu",
         "image": "jameshosken.jpg"
     },
 
@@ -101,8 +115,8 @@
         "roles": ["Lab Monitor"],
         "current": "yes",
         "description": {
-            "short": "is the coolest CS major",
-            "long": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+            "short": "junior trying to double major in CS and IM.",
+            "long": "Arantza is a junior majoring in Computer Science and minoring in Interactive Media. She is currently very interested in learning how different technologies can be used to improve educational systems around the world. Her hobbies include binge watching T.V. series, playing soccer when possible, and finding new music to listen to."
         },
         "courses": [""],
         "website": "https://arantza-rodriguez.net/",
@@ -115,8 +129,8 @@
         "roles": ["Lab Monitor"],
         "current": "yes",
         "description": {
-            "short": "pretends he is an Engineering major",
-            "long": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+            "short": "likes uncommented code because he's up for a challenge.",
+            "long": "A Junior Computer Science major with minors in Interactive Media and Natural Sciences, and likes to sometimes pretend he's an engineering major. Studied abroad in New York and did J-terms in Washington DC and Berlin. He's interested in physical computing and the effect of technology on people. He also loves music and you will almost always see him with his headphones."
         },
         "courses": [""],
         "website": "https://adhamchakohi.net/",
@@ -143,8 +157,8 @@
         "roles": ["Lab Monitor"],
         "current": "yes",
         "description": {
-            "short": "pretends he is a Film major",
-            "long": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+            "short": "hanging in there",
+            "long": "Adam is Nagy but he is not nag-y. He is an experienced coffee drinker and meme enthusiast which he considers an art form. He is a film major and he is also interested in tech, making IM the perfect fusion of his passions. He thinks Jack White is a God and he is probably not mistaken."
         },
         "courses": [""],
         "website": "https://adamnagy.net/",
@@ -171,8 +185,8 @@
         "roles": ["Lab Monitor"],
         "current": "yes",
         "description": {
-            "short": "pretends she is a Visual Arts major",
-            "long": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+            "short": "Emirati student between Interactive Media, Legal Studies Film, and VisArts.",
+            "long": "Lateefa is from Abu Dhabi, UAE who gained interest in Interactive Media during her freshman spring semester after taking Communications Lab and dropped her plan for majoring in Philosophy for Interactive Media. Lateefa is interested in the versatility of storytelling and world-building in Interactive Media. She also enjoys spending 8 hours straight on A/V edits. Totally chill."
         },
         "courses": [""],
         "website": "https://lateefa-almazroeei.net/",
@@ -185,8 +199,8 @@
         "roles": ["Lab Monitor"],
         "current": "yes",
         "description": {
-            "short": "study abroad student from NYUSH",
-            "long": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+            "short": "IM Lab is my second dorm~",
+            "long": "Hi! I am Yuxin Zhou from NYU Shanghai, Junior student double major in IM and Business & Finance. I am interested in interactive coding with Processing and P5.js, and am inventorying the accessories of the Lab. So...If you would like to know what interesting sensors and devices we have in the Lab, welcome to talk with me! Also, if you are interested in IM classes in NYU Shanghai for your studying away plan, I am glad to share my experience with you."
         },
         "courses": [""],
         "website": "https://yuxinzhou.net/",
