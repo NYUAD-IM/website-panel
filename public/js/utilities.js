@@ -46,9 +46,9 @@ let send = (_data) => {
     data: _data,
     dataType: 'json'
   }).done(()=>{
-    alert('saved')
-  }).fail(()=>{
-    console.log("failed")
-    //alert('failed');                      Switch this back once working
+    alert('successfully saved information!')
+  }).fail((err)=>{
+    console.log(err);
+    alert('saved did not work... failed')
   })
 }
