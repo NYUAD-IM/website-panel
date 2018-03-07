@@ -41,14 +41,14 @@ let listParse = (obj, populate, list) => {
 let send = (_data) => {
   $.ajax({
     // 'http://localhost:5000/data/' +
-    url: '../data/' + document.getElementById('category').innerText,
+    url: '../save/' + document.getElementById('category').innerText,
     method: 'POST',
     data: _data,
     dataType: 'json'
-  }).done(()=>{
-    alert('successfully saved information!')
-  }).fail((err)=>{
-    console.log(err);
-    alert('saved did not work... failed')
+  }).done((data)=>{
+    alert(data.message)
+  }).fail((data)=>{
+    // console.log(err);
+    alert('saved did not work... failed\n'+data.error)
   })
 }
