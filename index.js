@@ -61,10 +61,10 @@ function jsonSave(req, res) {
         if (err) {
             res.status(400)
             res.send({error: err})
-        }
-
-        res.status(200)
-        res.send({message: 'successfully saved '+file+'!'})
+        }else{
+	        res.status(200)
+	        res.send({message: 'successfully saved '+file+'!'})
+	}
     })
 }
 
