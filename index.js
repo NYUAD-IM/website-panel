@@ -56,15 +56,14 @@ function jsonEdit(req, res) {
 }
 
 function jsonSave(req, res) {
-
-    fs.writeFile("public/data/" + file + ".json", JSON.stringify(req.body.data), (err) => {
+    fs.writeFile("public/data/" + req.body.title + ".json", JSON.stringify(req.body.data), (err) => {
         if (err) {
             res.status(400)
             res.send({error: err})
         }else{
 	        res.status(200)
 	        res.send({message: 'successfully saved '+file+'!'})
-	}
+	       }
     })
 }
 
