@@ -67,7 +67,7 @@ function jsonSave(req, res) {
         }else{
 	        res.status(200)
 	        res.send({message: 'successfully saved '+file+'!'})
-	}
+	       }
     })
 }
 

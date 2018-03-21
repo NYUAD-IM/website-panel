@@ -1,6 +1,6 @@
 let parse = () => {
     let data = []
-
+    let title = document.getElementById('category')
     let persons = document.getElementsByClassName('entry')
     let names = document.getElementsByClassName('name')
     let roles = document.getElementsByClassName('roles')
@@ -28,5 +28,5 @@ let parse = () => {
 
         data.push(p)
     }
-    send({'data':data})
+    send({'data':data, 'title':title.innerText})
 }
