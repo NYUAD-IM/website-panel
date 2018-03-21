@@ -15,7 +15,7 @@ express()
     .set('views', 'public/views')
     .set('view engine', 'pug')
 
-    .get('/', (req, res) => res.send('Welcome the NYUAD.IM Heroku landing. Visit /api/* or /edit/* for the JSON data pages.'))
+    .get('/', (req, res) => res.redirect('/edit/'))
     .get('/api/*', jsonLoad)
     .get('/edit/*', jsonEdit)
     .post('/save/*', jsonSave)
@@ -56,6 +56,9 @@ function jsonEdit(req, res) {
 }
 
 function jsonSave(req, res) {
+    res.header('Access-Control-Allow-Origin', 'nyuad-im.github.io')
+    res.header('Access-Control-Allow-Origin', 'nyuad.im')
+    res.header('Access-Control-Allow-Origin', 'radio.nyuad.im')
 
     fs.writeFile("public/data/" + file + ".json", JSON.stringify(req.body.data), (err) => {
         if (err) {
