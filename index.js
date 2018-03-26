@@ -25,6 +25,7 @@ express()
 // TODO: Could the load and edit functions be merged? Rather similar. Also, why can't this be an express-style function?
 // Pull JSON data based on url request, serve to client:
 function jsonLoad(req, res) {
+    res.header('Access-Control-Allow-Origin', '*')
     let outData
     cutPath(req.url)
     fs.readFile("public/data/" + file + ".json", (err, inData) => {
@@ -41,6 +42,7 @@ function jsonEdit(req, res) {
     res.header('Access-Control-Allow-Origin', 'nyuad-im.github.io')
     res.header('Access-Control-Allow-Origin', 'nyuad.im')
     res.header('Access-Control-Allow-Origin', 'radio.nyuad.im')
+    res.header('Access-Control-Allow-Origin', 'herokuapp.com')
 
     let pugData
     cutPath(req.url)
@@ -59,6 +61,7 @@ function jsonSave(req, res) {
     res.header('Access-Control-Allow-Origin', 'nyuad-im.github.io')
     res.header('Access-Control-Allow-Origin', 'nyuad.im')
     res.header('Access-Control-Allow-Origin', 'radio.nyuad.im')
+    res.header('Access-Control-Allow-Origin', 'herokuapp.com')
 
     fs.writeFile("public/data/" + file + ".json", JSON.stringify(req.body.data), (err) => {
         if (err) {
