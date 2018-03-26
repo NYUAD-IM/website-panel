@@ -1,5 +1,5 @@
 #DATA
-public/data
+./public/data/*
 
 # Logs
 logs
