@@ -1,7 +1,8 @@
-#DATA
+# DATA
 data
 public/data
 public/data/people.json
+*.json
 
 # Logs
 logs
