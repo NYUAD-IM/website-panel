@@ -1,9 +1,3 @@
-# DATA
-data
-public/data
-public/data/people.json
-*.json
-
 # Logs
 logs
 *.log
@@ -62,4 +56,7 @@ typings/
 
 # dotenv environment variables file
 .env
+
+# Data
+public/data
 
