@@ -39,10 +39,7 @@ function jsonLoad(req, res) {
 }
 
 function jsonEdit(req, res) {
-    res.header('Access-Control-Allow-Origin', 'nyuad-im.github.io')
-    res.header('Access-Control-Allow-Origin', 'nyuad.im')
-    res.header('Access-Control-Allow-Origin', 'radio.nyuad.im')
-    res.header('Access-Control-Allow-Origin', 'herokuapp.com')
+    res.header('Access-Control-Allow-Origin', '*')
 
     let pugData
     cutPath(req.url)
@@ -58,10 +55,7 @@ function jsonEdit(req, res) {
 }
 
 function jsonSave(req, res) {
-    res.header('Access-Control-Allow-Origin', 'nyuad-im.github.io')
-    res.header('Access-Control-Allow-Origin', 'nyuad.im')
-    res.header('Access-Control-Allow-Origin', 'radio.nyuad.im')
-    res.header('Access-Control-Allow-Origin', 'herokuapp.com')
+    res.header('Access-Control-Allow-Origin', '*')
 
     fs.writeFile("public/data/" + file + ".json", JSON.stringify(req.body.data), (err) => {
         if (err) {
