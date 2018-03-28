@@ -23,8 +23,8 @@ let parse = () => {
         a.date = dates[i].value
         a.location = locations[i].value
         a.description = descriptions[i].value
-        a.links.url = urls[i].value
-        a.links.text = texts[i].value
+        a.link.url = urls[i].value
+        a.link.text = texts[i].value
 
         data.push(a)
     }
