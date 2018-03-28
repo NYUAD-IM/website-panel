@@ -97,7 +97,8 @@ input.text, input.machine {
 	cursor: pointer;
 }
 
-.remove {
+.entry-button {
+	margin-top: 0;
 	float: right;
 	width: 25%;
 	border: 2px solid black;
@@ -133,6 +134,7 @@ button {
 
 	.entry {
 		margin: 0;
+		margin-top: 2%;
 	}
 
 	h1 {
@@ -148,8 +150,12 @@ button {
 		width: 47%;
 	}
 
-	button, .remove, .footer {
+	button, .entry-button, .footer {
 		width: 50%;
+	}
+
+	.entry-button {
+		margin-top: 2%;
 	}
 
 	.footer button {

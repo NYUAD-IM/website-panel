@@ -1,4 +1,4 @@
-let add = (field) => {
+let addField = (field) => {
   //console.log(field)
   let btn = field.lastChild
   let newIn = document.createElement('input')
@@ -10,6 +10,17 @@ let add = (field) => {
     field.appendChild(newIn)
     field.appendChild(btn)
   }
+}
+
+let addEntry = () => {
+    
+}
+
+let removeEntry = (entry) => {
+    // The trick: DOM elements have to be removed via parent elements.
+    // First remove the <br> following this <div>, then the <div> itself:
+    entry.parentNode.removeChild(entry.nextSibling)
+    entry.parentNode.removeChild(entry)
 }
 
 let listParse = (obj, populate, list) => {

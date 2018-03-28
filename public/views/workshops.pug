@@ -28,7 +28,7 @@ html
                     div.tags
                         each tag in ws.tags
                             input.tag.entry-field(value= tag, placeholder= "Empty tags are removed on save")
-                        button(onclick="add(this.parentNode)") Add Tag
+                        button(onclick="addField(this.parentNode)") Add Tag
                     div.legend link url + text
                     div.links
                         input.url.entry-field(value= ws.links.url, placeholder= 'url')

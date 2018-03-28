@@ -18,7 +18,7 @@ html
                     div.roles
                         each role in person.roles
                             input.entry-field(value= role, placeholder= "Empty roles are removed on save")
-                        button(onclick="add(this.parentNode)") Add Role
+                        button(onclick="addField(this.parentNode)") Add Role
                     div.legend currently here?
                     if person.current
                         input.current.entry-field(type='checkbox' value= person.current checked="checked")
@@ -32,14 +32,15 @@ html
                     div.courses
                         each course in person.courses
                             input.entry-field(value= course, placeholder= "Empty courses are removed on save")
-                        button(onclick="add(this.parentNode)") Add Course
+                        button(onclick="addField(this.parentNode)") Add Course
                     div.legend website
                     input.website.entry-field(value= person.website)
                     div.legend email
                     input.email.entry-field(value= person.email)
                     div.legend image
                     input.image.entry-field(value= person.image)
-                br
+                    button(onclick="removeEntry(this.parentNode)").entry-button Remove Entry
+                button(onclick="addEntry").entry-button Add Entry
             div.footer
                 button(onclick="parse()") Click to Save
         

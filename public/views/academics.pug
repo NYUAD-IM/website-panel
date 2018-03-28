@@ -24,12 +24,12 @@ html
                     div.instructors
                         each instructor in course.instructors
                             input.entry-field(value= instructor, placeholder= "Empty instructors are removed on save")
-                        button(onclick="add(this.parentNode)") Add Instructor
+                        button(onclick="addField(this.parentNode)") Add Instructor
                     div.legend terms
                     div.terms
                         each term in course.terms
                             input.entry-field(value= term, placeholder= "Empty terms are removed on save")
-                        button(onclick="add(this.parentNode)") Add Term
+                        button(onclick="addField(this.parentNode)") Add Term
                     div.legend currently offered?
                     if course.current
                         input.current.entry-field(type='checkbox' value= course.current checked="checked")
@@ -47,12 +47,12 @@ html
                     div.crosslisted
                         each listing in course.crosslisted
                             input.entry-field(value= listing, placeholder= "Empty listings are removed on save")
-                        button(onclick="add(this.parentNode)") Add Cross-Listing
+                        button(onclick="addField(this.parentNode)") Add Cross-Listing
                     div.legend tags
                     div.tags
                         each tag in course.tags
                             input.entry-field(value= tag, placeholder= "Empty tags are removed on save")
-                        button(onclick="add(this.parentNode)") Add Tag
+                        button(onclick="addField(this.parentNode)") Add Tag
                 br
             div.footer
                 button(onclick="parse()") Click to Save

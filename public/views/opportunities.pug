@@ -20,7 +20,7 @@ html
                     div.sub
                         each s in op.category.sub
                             input.entry-field(value= s, placeholder= "Empty categories are removed on save")
-                        button(onclick="add(this.parentNode)") Add Subcategory
+                        button(onclick="addField(this.parentNode)") Add Subcategory
                     div.legend location
                     input.location.entry-field(value= op.location)
                     div.legend link
