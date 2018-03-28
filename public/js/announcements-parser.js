@@ -1,8 +1,13 @@
+let init = () => {
+    let isCurrent = document.getElementsByClassName('isCurrent')[0]
+}
+
 let parse = () => {
     let data = []
 
     let announcements = document.getElementsByClassName('entry')
     let titles = document.getElementsByClassName('title')
+    let isCurrent = document.getElementsByClassName('isCurrent')
     let dates = document.getElementsByClassName('date')
     let locations = document.getElementsByClassName('location')
     let descriptions = document.getElementsByClassName('desc')
@@ -14,6 +19,7 @@ let parse = () => {
         if(i == 'length') break
         let a = {'links':{'url':'','text':''}}
         a.title = titles[i].value
+	a.isCurrent = isCurrent[i].checked
         a.date = dates[i].value
         a.location = locations[i].value
         a.description = descriptions[i].value

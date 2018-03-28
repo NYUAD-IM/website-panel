@@ -1,4 +1,3 @@
-
 body {
 	margin: 0;
 	padding: 0;
@@ -31,6 +30,12 @@ input, textarea, li {
 input {
 	width: 50%;
 }
+
+input[type="checkbox"]{
+	width: 50px;
+}
+
+
 
 input.url, input.human {
 	width: 24%;

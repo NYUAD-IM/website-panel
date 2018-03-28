@@ -18,7 +18,7 @@ let parse = () => {
         let p = {'roles':[],'description':{'short':'','long':''},'courses':[]}
         p.name = names[i].value
         listParse(p, p.roles, roles[i])
-        p.current = currents[i].value
+        p.current = currents[i].checked
         p.description.short = desc_short[i].value
         p.description.long = desc_long[i].value
         listParse(p, p.courses, courses[i])
