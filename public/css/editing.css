@@ -1,10 +1,11 @@
+
 body {
 	margin: 0;
 	padding: 0;
 	font-family: 'Source Sans Pro', 'Inter UI', Trebuchet MS;
 }
 
-h1{
+h1 {
 	background-color: black;
 	color: white;
 	height: 80px;
@@ -34,8 +35,6 @@ input {
 input[type="checkbox"]{
 	width: 50px;
 }
-
-
 
 input.url, input.human {
 	width: 24%;
@@ -98,6 +97,15 @@ input.text, input.machine {
 	cursor: pointer;
 }
 
+.remove {
+	float: right;
+	width: 25%;
+	border: 2px solid black;
+	font-size: 1.2em;
+	font-weight: bold;
+	cursor: pointer;
+}
+
 button {
 	margin-top: 0.5em;
 	float: left;
@@ -106,4 +114,45 @@ button {
 	background-color: white;
 	cursor: pointer;
 	clear: both;
+}
+
+@media screen and (max-width: 950px) {
+	textarea {
+	width: 98%;
+	}
+
+	.footer {
+		width: 29%;
+	}
+}
+
+@media screen and (max-width: 595px) {
+	.container {
+		margin-top: 70px;
+	}
+
+	.entry {
+		margin: 0;
+	}
+
+	h1 {
+		height: 50px;
+		font-size: 40px;
+	}
+
+	input {
+		width: 98%;
+	}
+
+	input.url, input.human, input.text, input.machine {
+		width: 47%;
+	}
+
+	button, .remove, .footer {
+		width: 50%;
+	}
+
+	.footer button {
+		height: 40px;
+	}
 }
