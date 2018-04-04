@@ -12,8 +12,21 @@ let addField = (field) => {
   }
 }
 
-let addEntry = () => {
-    
+let addEntry = (node) => {
+    // The node of the button is passed in. Clone the previous entry:
+    var clone = node.previousSibling.cloneNode(true)
+    var btnClone = node.cloneNode(true)
+    // Access the HTMLCollection of .entry-field elements:
+    var fields = clone.getElementsByClassName('entry-field')
+    // Set them to blank:
+    for (let i of fields) {
+        i.value = ''
+    }
+    // Add the new entry after the br:
+    node.nextSibling.insertAdjacentElement('afterend', clone)
+    // Add a new button and br after the entry:
+    node.nextSibling.nextSibling.insertAdjacentElement('afterend', btnClone)
+    node.nextSibling.nextSibling.nextSibling.insertAdjacentHTML('afterend', '<br>');
 }
 
 let removeEntry = (entry) => {
@@ -51,7 +64,7 @@ let listParse = (obj, populate, list) => {
 
 let send = (_data) => {
   $.ajax({
-    // 'http://localhost:5000/data/' +
+    // 'https://localhost:5000/data/' +
     url: 'https://imheroku.herokuapp.com/save/' + document.getElementById('category').innerText,
     method: 'POST',
     data: _data,

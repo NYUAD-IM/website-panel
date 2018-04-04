@@ -40,7 +40,8 @@ html
                     div.legend image
                     input.image.entry-field(value= person.image)
                     button(onclick="removeEntry(this.parentNode)").entry-button Remove Entry
-                button(onclick="addEntry").entry-button Add Entry
+                button(onclick="addEntry(this)").entry-button Add Entry
+                br
             div.footer
                 button(onclick="parse()") Click to Save
         

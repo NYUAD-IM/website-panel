@@ -34,6 +34,8 @@ html
                         input.name.entry-field(value= op.connection.name, placeholder= 'name')
                         input.contact.entry-field(value= op.connection.contact, placeholder= 'contact info')
                         input.relationship.entry-field(value= op.connection.relationship, placeholder= 'relationship')
+                    button(onclick="removeEntry(this.parentNode)").entry-button Remove Entry
+                button(onclick="addEntry(this)").entry-button Add Entry
                 br
             div.footer
                 button(onclick="parse()") Click to Save

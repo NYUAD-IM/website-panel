@@ -1,11 +1,13 @@
 doctype html
+
+// HTML template
 html
     head
         script(src="https://code.jquery.com/jquery-3.3.1.min.js", integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=", 
   crossorigin="anonymous", type="text/javascript")
         script(src="../js/activities-parser.js", type="text/javascript")
         script(src="../js/utilities.js", type="text/javascript")
-        link(rel='stylesheet' href='../css/editing.css')
+        link(rel='stylesheet' href='../css/editing.css')            
     body
         h1#category activities
         div.container
@@ -18,11 +20,12 @@ html
                     textarea.blurb.entry-field(cols=80, rows=5)= activity.blurb
                     // TODO: What's the best UX for these page-relative paths?
                     div.legend image path
-                    input.image.entry-field(value= activity.image)
                     // TODO: Maybe have image preview? Guidelines for dimensions/size?
+                    input.image.entry-field(value= activity.image)
                     div.legend link
                     input.link.entry-field(value= activity.link)
-                    
+                    button(onclick="removeEntry(this.parentNode)").entry-button Remove Entry
+                button(onclick="addEntry(this)").entry-button Add Entry
                 br
             div.footer
                 button(onclick="parse()") Click to Save

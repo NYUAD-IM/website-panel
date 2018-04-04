@@ -53,6 +53,8 @@ html
                         each tag in course.tags
                             input.entry-field(value= tag, placeholder= "Empty tags are removed on save")
                         button(onclick="addField(this.parentNode)") Add Tag
+                    button(onclick="removeEntry(this.parentNode)").entry-button Remove Entry
+                button(onclick="addEntry(this)").entry-button Add Entry
                 br
             div.footer
                 button(onclick="parse()") Click to Save
