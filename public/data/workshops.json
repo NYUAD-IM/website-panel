@@ -4,7 +4,7 @@
     "instructor": "Gabor Csapo and Jihyun Kim",
     "date": {
       "human": "April 15th 6:00pm-8:00pm",
-      "machine":"150425-1800"
+      "machine":"180415-1800"
     },
     "location": "Arts Center - C3-029",
     "description": "Go from \"hello world\" to Bayes classifiers with Python, Jupyter and Pandas. We'll analyze the Random Acts of Pizza dataset to create a simple classifier that will hopefully clear up why the big fuss around machine learning and what your responsibility is in designing a better future.",
