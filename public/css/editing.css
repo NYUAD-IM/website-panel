@@ -18,6 +18,12 @@ h1 {
 	text-align: center;
 }
 
+h2 {
+	margin: 0.5em;
+	font-size: 2em;
+	text-align: center;
+}
+
 h3 {
 	font-size: 1.8em;
 }
@@ -58,6 +64,12 @@ input.text, input.machine {
 	border: 3px solid black;
 	margin: 2%;
 	padding: 2%;
+}
+
+.entry-archive {
+	width: 100%;
+	border: 3px solid black;
+	margin: 1%;
 }
 
 .legend {

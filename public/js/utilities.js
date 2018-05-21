@@ -32,13 +32,17 @@ let addEntry = (node) => {
 let removeEntry = (entry) => {
     // The trick: DOM elements have to be removed via parent elements.
     // First remove the <br> following this <div>, then the <div> itself:
-    entry.parentNode.removeChild(entry.nextSibling)
-    entry.parentNode.removeChild(entry)
+    let e = entry.children[2].value
+    let r = confirm('remove "' + e + '"?')
+    if (r == true) {
+      entry.parentNode.removeChild(entry.nextSibling)
+      entry.parentNode.removeChild(entry)
+    }
 }
 
 let listParse = (obj, populate, list) => {
     // 'populate' is the array to be populated, passed as obj.populate, e.g. person.tags
-    for(var x of list.children)
+    for(var x of list.children) {
         // Check that we are working with <input> elements:
         if(x.nodeName === "INPUT") {
             //console.log(x.nodeName)
@@ -60,12 +64,20 @@ let listParse = (obj, populate, list) => {
             }
         }
         //console.log(populate)
+    }
+}
+
+let fileParse = (str, goal) => {
+    // get all characters of str up to _
+    // if cutStr.Equals(goal) return true
+    // else return false
+    return true
 }
 
 let send = (_data) => {
   $.ajax({
-    // 'https://localhost:5000/data/' +
-    url: 'https://imheroku.herokuapp.com/save/' + document.getElementById('category').innerText,
+    // 'https://imheroku.herokuapp.com/save/' +
+    url: 'http://localhost:5000/save/' + document.getElementById('category').innerText,
     method: 'POST',
     data: _data,
     dataType: 'json'

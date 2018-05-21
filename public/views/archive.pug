@@ -1,0 +1,50 @@
+doctype html
+html
+    head
+        script(src="https://code.jquery.com/jquery-3.3.1.min.js",
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=", 
+        crossorigin="anonymous", type="text/javascript")
+        script(src="../js/people-parser.js", type="text/javascript")
+        script(src="../js/utilities.js", type="text/javascript")
+        script(src="../index.js", type="text/javascript")
+        
+        -let fileParse = (str, goal) => {
+              // get all characters of str up to _
+              // if cutStr.Equals(goal) return true
+              // else return false
+              return true
+        -}
+        
+        link(rel="stylesheet" href="../css/editing.css")
+    body
+        h1 NYUAD IM archive
+        div.container
+            div.entry-archive
+                h2 academics
+                ul.academics
+                    each file in data
+                        -var add = fileParse(file, 'academics')
+                        -console.log(add)
+                        if add
+                            -var f = file
+                            li
+                                a(href=f) #{f}
+            div.entry-archive
+                h2 activities
+                ul.activities
+            div.entry-archive
+                h2 announcements
+                ul.announcements
+            div.entry-archive
+                h2 opportunities
+                ul.opportunities
+                    li
+                        a(href="opportunities_2018-5-20-162357.json") opportunities_2018-5-20-162357
+            div.entry-archive
+                h2 people
+                ul.people
+            div.entry-archive
+                h2 workshops
+                ul.workshops
+            div
+              a.legend(href="../edit/index.html") edit

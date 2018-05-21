@@ -18,20 +18,20 @@ express()
     .get('/', (req, res) => res.redirect('/edit/'))
     .get('/api/*', jsonLoad)
     .get('/edit/*', jsonEdit)
+    .get('/archive', jsonArchive)
     .post('/save/*', jsonSave)
 
     .listen(PORT, () => console.log(`Listening on ${ PORT }`))
 
-// TODO: Could the load and edit functions be merged? Rather similar. Also, why can't this be an express-style function?
 // Pull JSON data based on url request, serve to client:
 function jsonLoad(req, res) {
     res.header('Access-Control-Allow-Origin', '*')
     let outData
     cutPath(req.url)
-    fs.readFile("public/data/" + file + ".json", (err, inData) => {
-        // TODO: Edit to avoid hard server crashes:
+    fs.readFile('public/data/' + file + '.json', (err, inData) => {
         if (err) {
-            res.status(404).send('Bad Request')
+            res.status(400)
+            res.send({error: err})
         }
         outData = JSON.parse(inData)
         res.send(outData)
@@ -40,31 +40,62 @@ function jsonLoad(req, res) {
 
 function jsonEdit(req, res) {
     res.header('Access-Control-Allow-Origin', '*')
-
     let pugData
     cutPath(req.url)
-    fs.readFile("public/data/" + file + ".json", (err, inData) => {
-        // TODO: Edit to avoid hard server crashes:
+    fs.readFile('public/data/' + file + '.json', (err, inData) => {
         if (err) {
-            res.status(400).send('Bad Request')
+            res.status(400)
+            res.send({error: err})
         }
         pugData = JSON.parse(inData)
         // Serve the requested section based on the pug spec:
-        res.render(file + '.pug', {"data": pugData})
+        res.render(file + '.pug', {'data': pugData})
+    })
+}
+
+function jsonArchive(req, res) {
+    res.header('Access-Control-Allow-Origin', '*')
+    fs.readdir('public/archive', (err, files) => {
+        if (err) { // Error handle reading
+            res.status(400)
+            res.send({error: err + ' parsing archive directory.'})
+        } else {
+            res.render('archive.pug', {data: files})
+        }
     })
 }
 
 function jsonSave(req, res) {
-    res.header('Access-Control-Allow-Origin', '*')
+    //res.header('Access-Control-Allow-Origin', '*')
+    let date = dateString();
+    cutPath(req.url)
 
-    fs.writeFile("public/data/" + file + ".json", JSON.stringify(req.body.data), (err) => {
+    // Save the current version (just before updates) to the archive:
+    let toArchive
+    fs.readFile('public/data/' + file + '.json', (err, inData) => { // Read in the unedited data
+        if (err) { // Error handle reading
+            res.status(400)
+            res.send({error: err})
+        } else {
+            let archiveName = file + '_' + date + '.json'; // Format the archive filename
+            fs.writeFile('public/archive/' + archiveName, inData, (err) => { // Write to the archive
+                if (err) { // Error handle writing
+                    res.status(400)
+                    res.send({error: err + ' backing up to archive.'})
+                }
+            })
+        }
+    })
+
+    // Save the newly updated version to the data folder:
+    fs.writeFile('public/data/' + file + '.json', JSON.stringify(req.body.data), (err) => {
         if (err) {
             res.status(400)
             res.send({error: err})
         }else{
-	        res.status(200)
-	        res.send({message: 'successfully saved '+file+'!'})
-	       }
+	          res.status(200)
+	          res.send({message: 'successfully saved ' + file + '!'})
+	      }
     })
 }
 
@@ -72,4 +103,24 @@ function cutPath(url) {
     let urlBits = url.split('/');
     let wantedBit = urlBits[urlBits.length - 1];
     file = wantedBit;
+}
+
+function dateString() {
+    let date = new Date();
+    let d = '';
+    let y = date.getFullYear();
+    d += y;
+    d += "-" + (date.getMonth()+1);
+    d += "-" + date.getDate();
+    d += "-" + date.getHours();
+    d += date.getMinutes();
+    d += date.getSeconds();
+    return d;
+}
+
+function addToArchive(category, posting) {
+    // update the archive index.html to add the posting
+    // Find the ul with class of the given category
+    // make a new child li after the last child to the ul
+    // give that href the posting + '.json' and make the body text the posting
 }
