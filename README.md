@@ -3,8 +3,8 @@ Panel to manage the contents of http://nyuad.im
 
 
 ### TODO
-- Save backups of form on save (archive)
-- Add confirmation alert before entry remove
+- Save backups of form on save (archive) (Backups save, need to fix function in pug that prints them back to /archive page)
+- ~~Add confirmation alert before entry remove~~
 - Look into uploading images + add a disclaimer asking to upload only square images (300x300 MAX)
 - Look into error handling (last route on the list)
 - ~~Add new entry after current entry~~
