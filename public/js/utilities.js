@@ -63,8 +63,8 @@ let listParse = (obj, populate, list) => {
 
 let send = (_data) => {
   $.ajax({
-    // 'https://imheroku.herokuapp.com/save/' +
-    url: 'http://localhost:5000/save/' + document.getElementById('category').innerText,
+    // 'http://localhost:5000/save/' +
+    url: 'https://imheroku.herokuapp.com/save/' + document.getElementById('category').innerText,
     method: 'POST',
     data: _data,
     dataType: 'json'
