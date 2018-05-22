@@ -106,14 +106,14 @@ function cutPath(url) {
 }
 
 function dateString() {
-    let date = new Date();
-    let d = '';
-    let y = date.getFullYear();
-    d += y;
-    d += "-" + (date.getMonth()+1);
-    d += "-" + date.getDate();
-    d += "-" + date.getHours();
-    d += date.getMinutes();
-    d += date.getSeconds();
-    return d;
+    let date = new Date()
+    let d = ''
+    let y = date.getFullYear()
+    d += y
+    d += "-" + (date.getMonth()+1)
+    d += "-" + date.getDate()
+    d += "-" + date.getHours()
+    d += ('0' + date.getMinutes()).slice(-2) // getMinutes Returns 0-59, so for consistency,
+    d += ('0' + date.getSeconds()).slice(-2) // add a 0 but use only the rightmost two numbers.
+    return d
 }

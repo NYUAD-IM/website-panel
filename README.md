@@ -1,10 +1,11 @@
 # website-panel
-Panel to manage the contents of http://nyuad.im 
+Panel to manage the contents of http://nyuad.im
 
 
 ### TODO
-- Save backups of form on save (archive) (Backups save, need to fix function in pug that prints them back to /archive page)
+- ~~Save backups of form on save (archive)~~ (Backups save, but are sometimes inaccessible?)
 - ~~Add confirmation alert before entry remove~~
+- Add documentation
 - Look into uploading images + add a disclaimer asking to upload only square images (300x300 MAX)
 - Look into error handling (last route on the list)
 - ~~Add new entry after current entry~~
