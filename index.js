@@ -117,10 +117,3 @@ function dateString() {
     d += date.getSeconds();
     return d;
 }
-
-function addToArchive(category, posting) {
-    // update the archive index.html to add the posting
-    // Find the ul with class of the given category
-    // make a new child li after the last child to the ul
-    // give that href the posting + '.json' and make the body text the posting
-}

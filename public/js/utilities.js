@@ -40,38 +40,25 @@ let removeEntry = (entry) => {
     }
 }
 
+// Used when saving a page by the parse function of each Pug page's; [page]-parser.js
+// Responsible for removing blanks in multi-input sections of each page,
+// e.g. "instructors", "sub-categories", "roles", etc.
 let listParse = (obj, populate, list) => {
     // 'populate' is the array to be populated, passed as obj.populate, e.g. person.tags
     for(var x of list.children) {
         // Check that we are working with <input> elements:
         if(x.nodeName === "INPUT") {
-            //console.log(x.nodeName)
             // Push the child input field if not blank:
             if(x.value !== "") {
                 populate.push(x.value)
-                //console.log("pushed")
-                //console.log(x.value)
-            }
-            // If the input IS blank, skip it:
-            if(x.value === "") {
-                //console.log("Empty, skipped: ")
-                //console.log(x.value)
             }
             // If the input is blank AND this array is empty, add a blank slot:
             if(x.value === "" && populate.length == 0) {
-                //console.log("Empty array! ISSUE")
                 populate.push("")
             }
+            // Otherwise all blank slots are skipped.
         }
-        //console.log(populate)
     }
-}
-
-let fileParse = (str, goal) => {
-    // get all characters of str up to _
-    // if cutStr.Equals(goal) return true
-    // else return false
-    return true
 }
 
 let send = (_data) => {
@@ -84,7 +71,6 @@ let send = (_data) => {
   }).done((data)=>{
     alert(data.message)
   }).fail((data)=>{
-    // console.log(err);
     alert('saved did not work... failed\n'+data.error)
   })
 }

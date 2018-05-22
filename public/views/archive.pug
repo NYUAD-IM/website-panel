@@ -8,12 +8,30 @@ html
         script(src="../js/utilities.js", type="text/javascript")
         script(src="../index.js", type="text/javascript")
         
-        -let fileParse = (str, goal) => {
-              // get all characters of str up to _
-              // if cutStr.Equals(goal) return true
-              // else return false
-              return true
+        //- Unbuffered code, in-doc to allow for parsing before DOM ready:
+        -
+          var add = false
+          function fileParse(str, goal) {
+              var stop = str.indexOf('_')
+              var category = str.slice(0, stop)
+              if (category === goal)
+                  add= true
+              else
+                  add= false
+              if (add)
+                  var f = str  
         -}
+        
+        //-
+          Pug mixins allow for reusable template blocks of code
+          Here we run the function to on the given file,
+          adding it to the appropriate category.
+        mixin addToArchive(file, category)
+            -fileParse(file, category)
+            if add
+                -var f = file
+                li
+                    a(href=f) #{f}
         
         link(rel="stylesheet" href="../css/editing.css")
     body
@@ -23,28 +41,31 @@ html
                 h2 academics
                 ul.academics
                     each file in data
-                        -var add = fileParse(file, 'academics')
-                        -console.log(add)
-                        if add
-                            -var f = file
-                            li
-                                a(href=f) #{f}
+                        +addToArchive(file, 'academics')
             div.entry-archive
                 h2 activities
                 ul.activities
+                    each file in data
+                        +addToArchive(file, 'activities')
             div.entry-archive
                 h2 announcements
                 ul.announcements
+                    each file in data
+                        +addToArchive(file, 'announcements')
             div.entry-archive
                 h2 opportunities
                 ul.opportunities
-                    li
-                        a(href="opportunities_2018-5-20-162357.json") opportunities_2018-5-20-162357
+                    each file in data
+                        +addToArchive(file, 'opportunities')
             div.entry-archive
                 h2 people
                 ul.people
+                    each file in data
+                        +addToArchive(file, 'people')
             div.entry-archive
                 h2 workshops
                 ul.workshops
+                    each file in data
+                      +addToArchive(file, 'workshops')
             div
               a.legend(href="../edit/index.html") edit
