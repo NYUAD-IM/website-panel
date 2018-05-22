@@ -52,11 +52,15 @@ let listParse = (obj, populate, list) => {
             if(x.value !== "") {
                 populate.push(x.value)
             }
+            // If the input IS blank, skip it:
+            if(x.value === "") {
+                //console.log("Empty, skipped: ")
+                //console.log(x.value)
+            }
             // If the input is blank AND this array is empty, add a blank slot:
             if(x.value === "" && populate.length == 0) {
                 populate.push("")
             }
-            // Otherwise all blank slots are skipped.
         }
     }
 }
