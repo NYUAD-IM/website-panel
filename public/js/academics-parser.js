@@ -26,7 +26,7 @@ let parse = () => {
         a.track = tracks[i].value
         listParse(a, a.instructors, instructors[i])
         listParse(a, a.terms, terms[i])
-        a.current = currents[i].value
+        a.current = currents[i].checked
         a.year = years[i].value
         a.link = links[i].value
         a.description.short = desc_short[i].value

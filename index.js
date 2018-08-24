@@ -66,7 +66,7 @@ function jsonArchive(req, res) {
 }
 
 function jsonSave(req, res) {
-    //res.header('Access-Control-Allow-Origin', '*')
+    res.header('Access-Control-Allow-Origin', '*')
     let date = dateString();
     cutPath(req.url)
 
@@ -88,6 +88,7 @@ function jsonSave(req, res) {
     })
 
     // Save the newly updated version to the data folder:
+    console.log(req.body.data);
     fs.writeFile('public/data/' + file + '.json', JSON.stringify(req.body.data), (err) => {
         if (err) {
             res.status(400)
